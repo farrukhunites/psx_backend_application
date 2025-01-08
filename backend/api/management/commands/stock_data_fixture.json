@@ -1,0 +1,4871 @@
+[
+    {
+        "model": "api.stock",
+        "pk": 1,
+        "fields": {
+            "stock_symbol": "AGTL",
+            "stock_name": "Al-Ghazi Tractors Limited",
+            "sector": "Automobile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 2,
+        "fields": {
+            "stock_symbol": "ATLH",
+            "stock_name": "Atlas Honda Limited",
+            "sector": "Automobile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 3,
+        "fields": {
+            "stock_symbol": "DFML",
+            "stock_name": "Dewan Farooque Motors Limited",
+            "sector": "Automobile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 4,
+        "fields": {
+            "stock_symbol": "GAL",
+            "stock_name": "Ghandhara Automobiles Limited",
+            "sector": "Automobile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 5,
+        "fields": {
+            "stock_symbol": "GHNI",
+            "stock_name": "Ghandhara Industries Limited",
+            "sector": "Automobile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 6,
+        "fields": {
+            "stock_symbol": "HCAR",
+            "stock_name": "Honda Atlas Cars (Pakistan) Limited",
+            "sector": "Automobile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 7,
+        "fields": {
+            "stock_symbol": "HINO",
+            "stock_name": "Hinopak Motors Limited",
+            "sector": "Automobile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 8,
+        "fields": {
+            "stock_symbol": "INDU",
+            "stock_name": "Indus Motor Company Limited",
+            "sector": "Automobile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 9,
+        "fields": {
+            "stock_symbol": "MTL",
+            "stock_name": "Millat Tractors Limited",
+            "sector": "Automobile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 10,
+        "fields": {
+            "stock_symbol": "SAZEW",
+            "stock_name": "Sazgar Engineering Works Limited",
+            "sector": "Automobile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 11,
+        "fields": {
+            "stock_symbol": "AGIL",
+            "stock_name": "Agriauto Industries Limited",
+            "sector": "Automobile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 12,
+        "fields": {
+            "stock_symbol": "ATBA",
+            "stock_name": "Atlas Battery Limited",
+            "sector": "Automobile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 13,
+        "fields": {
+            "stock_symbol": "BELA",
+            "stock_name": "Bela Automotives Limited",
+            "sector": "Automobile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 14,
+        "fields": {
+            "stock_symbol": "BWHL",
+            "stock_name": "Baluchistan Wheels Limited",
+            "sector": "Automobile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 15,
+        "fields": {
+            "stock_symbol": "DWAE",
+            "stock_name": "Dewan Automotive Engineering Limited",
+            "sector": "Automobile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 16,
+        "fields": {
+            "stock_symbol": "EXIDE",
+            "stock_name": "Exide Pakistan Limited",
+            "sector": "Automobile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 17,
+        "fields": {
+            "stock_symbol": "GTYR",
+            "stock_name": "Ghandhara Tyre & Rubber Company Limited",
+            "sector": "Automobile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 18,
+        "fields": {
+            "stock_symbol": "LOADS",
+            "stock_name": "Loads Limited",
+            "sector": "Automobile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 19,
+        "fields": {
+            "stock_symbol": "PTL",
+            "stock_name": "Panther Tyres Ltd.",
+            "sector": "Automobile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 20,
+        "fields": {
+            "stock_symbol": "TBL",
+            "stock_name": "Treet Battery Limited.",
+            "sector": "Automobile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 21,
+        "fields": {
+            "stock_symbol": "THALL",
+            "stock_name": "Thal Limited",
+            "sector": "Automobile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 22,
+        "fields": {
+            "stock_symbol": "EMCO",
+            "stock_name": "Emco Industries Limited",
+            "sector": "Cable & Electric"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 23,
+        "fields": {
+            "stock_symbol": "FCL",
+            "stock_name": "Fast Cables Limited",
+            "sector": "Cable & Electric"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 24,
+        "fields": {
+            "stock_symbol": "PAEL",
+            "stock_name": "Pak Elektron Limited",
+            "sector": "Cable & Electric"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 25,
+        "fields": {
+            "stock_symbol": "PCAL",
+            "stock_name": "Pakistan Cables Limited",
+            "sector": "Cable & Electric"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 26,
+        "fields": {
+            "stock_symbol": "SIEM",
+            "stock_name": "Siemens (Pakistan) Engineering",
+            "sector": "Cable & Electric"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 27,
+        "fields": {
+            "stock_symbol": "WAVES",
+            "stock_name": "Waves Corporation Limited",
+            "sector": "Cable & Electric"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 28,
+        "fields": {
+            "stock_symbol": "WAVESAPP",
+            "stock_name": "Waves Home Appliances Limited",
+            "sector": "Cable & Electric"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 29,
+        "fields": {
+            "stock_symbol": "ACPL",
+            "stock_name": "Attock Cement Pakistan Limited",
+            "sector": "Cement"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 30,
+        "fields": {
+            "stock_symbol": "BWCL",
+            "stock_name": "Bestway Cement Limited",
+            "sector": "Cement"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 31,
+        "fields": {
+            "stock_symbol": "CHCC",
+            "stock_name": "Cherat Cement Company Limited",
+            "sector": "Cement"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 32,
+        "fields": {
+            "stock_symbol": "DBCI",
+            "stock_name": "Dadabhoy Cement Industries Limited",
+            "sector": "Cement"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 33,
+        "fields": {
+            "stock_symbol": "DCL",
+            "stock_name": "Dewan Cement Limited",
+            "sector": "Cement"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 34,
+        "fields": {
+            "stock_symbol": "DGKC",
+            "stock_name": "D.G. Khan Cement Company Limited",
+            "sector": "Cement"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 35,
+        "fields": {
+            "stock_symbol": "DNCC",
+            "stock_name": "Dandot Cement Company Limited",
+            "sector": "Cement"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 36,
+        "fields": {
+            "stock_symbol": "FCCL",
+            "stock_name": "Fauji Cement Company Limited",
+            "sector": "Cement"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 37,
+        "fields": {
+            "stock_symbol": "FECTC",
+            "stock_name": "Fecto Cement Limited",
+            "sector": "Cement"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 38,
+        "fields": {
+            "stock_symbol": "FLYNG",
+            "stock_name": "Flying Cement Company Limited",
+            "sector": "Cement"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 39,
+        "fields": {
+            "stock_symbol": "GWLC",
+            "stock_name": "Gharibwal Cement Limited",
+            "sector": "Cement"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 40,
+        "fields": {
+            "stock_symbol": "KOHC",
+            "stock_name": "Kohat Cement Company Limited",
+            "sector": "Cement"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 41,
+        "fields": {
+            "stock_symbol": "LUCK",
+            "stock_name": "Lucky Cement Limited",
+            "sector": "Cement"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 42,
+        "fields": {
+            "stock_symbol": "MLCF",
+            "stock_name": "Maple Leaf Cement Factory Limited",
+            "sector": "Cement"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 43,
+        "fields": {
+            "stock_symbol": "PIOC",
+            "stock_name": "Pioneer Cement Limited",
+            "sector": "Cement"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 44,
+        "fields": {
+            "stock_symbol": "POWER",
+            "stock_name": "Power Cement Limited",
+            "sector": "Cement"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 45,
+        "fields": {
+            "stock_symbol": "SMCPL",
+            "stock_name": "Safe Mix Concrete Limited",
+            "sector": "Cement"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 46,
+        "fields": {
+            "stock_symbol": "THCCL",
+            "stock_name": "Thatta Cement Company Limited",
+            "sector": "Cement"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 47,
+        "fields": {
+            "stock_symbol": "ZELP",
+            "stock_name": "Zeal Pak Cement Factory Limited",
+            "sector": "Cement"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 48,
+        "fields": {
+            "stock_symbol": "AGL",
+            "stock_name": "Agritech Limited",
+            "sector": "Chemical"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 49,
+        "fields": {
+            "stock_symbol": "ARPL",
+            "stock_name": "Archroma Pakistan Limited",
+            "sector": "Chemical"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 50,
+        "fields": {
+            "stock_symbol": "BAPL",
+            "stock_name": "Bawany Air Products Limited",
+            "sector": "Chemical"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 51,
+        "fields": {
+            "stock_symbol": "BERG",
+            "stock_name": "Berger Paints Pakistan Limited",
+            "sector": "Chemical"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 52,
+        "fields": {
+            "stock_symbol": "BIFO",
+            "stock_name": "Biafo Industries Limited",
+            "sector": "Chemical"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 53,
+        "fields": {
+            "stock_symbol": "BUXL",
+            "stock_name": "Buxly Paints Limited",
+            "sector": "Chemical"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 54,
+        "fields": {
+            "stock_symbol": "DAAG",
+            "stock_name": "Data Agro Limited",
+            "sector": "Chemical"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 55,
+        "fields": {
+            "stock_symbol": "DOL",
+            "stock_name": "Descon Oxychem Limited",
+            "sector": "Chemical"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 56,
+        "fields": {
+            "stock_symbol": "DYNO",
+            "stock_name": "Dynea Pakistan Limited",
+            "sector": "Chemical"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 57,
+        "fields": {
+            "stock_symbol": "EPCL",
+            "stock_name": "Engro Polymer & Chemicals Limited",
+            "sector": "Chemical"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 58,
+        "fields": {
+            "stock_symbol": "GCIL",
+            "stock_name": "Ghani Chemical Industries Limited",
+            "sector": "Chemical"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 59,
+        "fields": {
+            "stock_symbol": "GGL",
+            "stock_name": "Ghani Global Holdings Limited",
+            "sector": "Chemical"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 60,
+        "fields": {
+            "stock_symbol": "ICL",
+            "stock_name": "Ittehad Chemicals Limited",
+            "sector": "Chemical"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 61,
+        "fields": {
+            "stock_symbol": "LCI",
+            "stock_name": "Lucky Core Industries Limited",
+            "sector": "Chemical"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 62,
+        "fields": {
+            "stock_symbol": "LOTCHEM",
+            "stock_name": "Lotte Chemical Pakistan Limited",
+            "sector": "Chemical"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 63,
+        "fields": {
+            "stock_symbol": "LPGL",
+            "stock_name": "Leiner Pak Gelatine Limited",
+            "sector": "Chemical"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 64,
+        "fields": {
+            "stock_symbol": "NICL",
+            "stock_name": "Nimir Industrial Chemicals Limited",
+            "sector": "Chemical"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 65,
+        "fields": {
+            "stock_symbol": "NRSL",
+            "stock_name": "Nimir Resins Limited",
+            "sector": "Chemical"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 66,
+        "fields": {
+            "stock_symbol": "PAKOXY",
+            "stock_name": "Pakistan Oxygen Limited",
+            "sector": "Chemical"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 67,
+        "fields": {
+            "stock_symbol": "PPVC",
+            "stock_name": "Pakistan PVC Limited",
+            "sector": "Chemical"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 68,
+        "fields": {
+            "stock_symbol": "SARC",
+            "stock_name": "Sardar Chemical Industries Limited",
+            "sector": "Chemical"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 69,
+        "fields": {
+            "stock_symbol": "SHCI",
+            "stock_name": "Shaffi Chemical Industries Limited",
+            "sector": "Chemical"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 70,
+        "fields": {
+            "stock_symbol": "SITC",
+            "stock_name": "Sitara Chemical Industries Limited",
+            "sector": "Chemical"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 71,
+        "fields": {
+            "stock_symbol": "SPL",
+            "stock_name": "Sitara Peroxide Limited",
+            "sector": "Chemical"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 72,
+        "fields": {
+            "stock_symbol": "WAHN",
+            "stock_name": "Wah Noble Chemicals Limited",
+            "sector": "Chemical"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 73,
+        "fields": {
+            "stock_symbol": "ABL",
+            "stock_name": "Allied Bank Limited",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 74,
+        "fields": {
+            "stock_symbol": "AKBL",
+            "stock_name": "Askari Bank Limited",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 75,
+        "fields": {
+            "stock_symbol": "BAFL",
+            "stock_name": "Bank Alfalah Limited",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 76,
+        "fields": {
+            "stock_symbol": "BAHL",
+            "stock_name": "Bank AL Habib Limited",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 77,
+        "fields": {
+            "stock_symbol": "BIPL",
+            "stock_name": "BankIslami Pakistan Limited",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 78,
+        "fields": {
+            "stock_symbol": "BML",
+            "stock_name": "Bank Makramah Limited",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 79,
+        "fields": {
+            "stock_symbol": "BOK",
+            "stock_name": "The Bank of Khyber",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 80,
+        "fields": {
+            "stock_symbol": "BOP",
+            "stock_name": "The Bank of Punjab",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 81,
+        "fields": {
+            "stock_symbol": "FABL",
+            "stock_name": "Faysal Bank Limited",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 82,
+        "fields": {
+            "stock_symbol": "HBL",
+            "stock_name": "Habib Bank Limited",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 83,
+        "fields": {
+            "stock_symbol": "HMB",
+            "stock_name": "Habib Metropolitan Bank Limited",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 84,
+        "fields": {
+            "stock_symbol": "JSBL",
+            "stock_name": "JS Bank Limited",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 85,
+        "fields": {
+            "stock_symbol": "MCB",
+            "stock_name": "MCB Bank Limited",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 86,
+        "fields": {
+            "stock_symbol": "MEBL",
+            "stock_name": "Meezan Bank Limited",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 87,
+        "fields": {
+            "stock_symbol": "NBP",
+            "stock_name": "National Bank of Pakistan",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 88,
+        "fields": {
+            "stock_symbol": "SBL",
+            "stock_name": "Samba Bank Limited",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 89,
+        "fields": {
+            "stock_symbol": "SCBPL",
+            "stock_name": "Standard Chartered Bank (Pak) Ltd",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 90,
+        "fields": {
+            "stock_symbol": "SILK",
+            "stock_name": "Silkbank Limited",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 91,
+        "fields": {
+            "stock_symbol": "SNBL",
+            "stock_name": "Soneri Bank Limited",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 92,
+        "fields": {
+            "stock_symbol": "UBL",
+            "stock_name": "United Bank Limited",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 93,
+        "fields": {
+            "stock_symbol": "786",
+            "stock_name": "786 Investments Limited",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 94,
+        "fields": {
+            "stock_symbol": "AHL",
+            "stock_name": "Arif Habib Limited",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 95,
+        "fields": {
+            "stock_symbol": "AKDSL",
+            "stock_name": "AKD Securities Limited",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 96,
+        "fields": {
+            "stock_symbol": "AMBL",
+            "stock_name": "Apna Microfinance Bank Limited",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 97,
+        "fields": {
+            "stock_symbol": "AMSL",
+            "stock_name": "Al-Mal Securities & Services Limited",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 98,
+        "fields": {
+            "stock_symbol": "CASH",
+            "stock_name": "Calcorp Limited",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 99,
+        "fields": {
+            "stock_symbol": "CYAN",
+            "stock_name": "Cyan Limited",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 100,
+        "fields": {
+            "stock_symbol": "DAWH",
+            "stock_name": "Dawood Hercules Corporation Limited",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 101,
+        "fields": {
+            "stock_symbol": "DEL",
+            "stock_name": "Dawood Equities Limited",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 102,
+        "fields": {
+            "stock_symbol": "DLL",
+            "stock_name": "Dawood Lawrencepur Limited",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 103,
+        "fields": {
+            "stock_symbol": "ENGROH",
+            "stock_name": "Engro Holdings Limited",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 104,
+        "fields": {
+            "stock_symbol": "ESBL",
+            "stock_name": "Escorts Investment Bank Limited",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 105,
+        "fields": {
+            "stock_symbol": "FCEL",
+            "stock_name": "First Capital Equities Limited",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 106,
+        "fields": {
+            "stock_symbol": "FCIBL",
+            "stock_name": "First Credit and Investment Bank Limited",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 107,
+        "fields": {
+            "stock_symbol": "FCSC",
+            "stock_name": "First Capital Securities Corporation",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 108,
+        "fields": {
+            "stock_symbol": "FDPL",
+            "stock_name": "First Dawood Properties Limited",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 109,
+        "fields": {
+            "stock_symbol": "FNEL",
+            "stock_name": "First National Equities Limited",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 110,
+        "fields": {
+            "stock_symbol": "ICIBL",
+            "stock_name": "Invest Capital Investment Bank Limited",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 111,
+        "fields": {
+            "stock_symbol": "IML",
+            "stock_name": "Imperial Limited",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 112,
+        "fields": {
+            "stock_symbol": "IMS",
+            "stock_name": "Intermarket Securities Limited",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 113,
+        "fields": {
+            "stock_symbol": "JSCL",
+            "stock_name": "Jahangir Siddiqui & Co. Ltd.",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 114,
+        "fields": {
+            "stock_symbol": "JSGCL",
+            "stock_name": "JS Global Capital Limited",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 115,
+        "fields": {
+            "stock_symbol": "JSIL",
+            "stock_name": "JS Investments Limited",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 116,
+        "fields": {
+            "stock_symbol": "LSECL",
+            "stock_name": "LSE Capital Limited.",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 117,
+        "fields": {
+            "stock_symbol": "LSEFSL",
+            "stock_name": "LSE Financial Services Limited.",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 118,
+        "fields": {
+            "stock_symbol": "LSEVL",
+            "stock_name": "LSE Ventures Limited",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 119,
+        "fields": {
+            "stock_symbol": "MCBIM",
+            "stock_name": "MCB Investment Management Limited.",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 120,
+        "fields": {
+            "stock_symbol": "NEXT",
+            "stock_name": "Next Capital Limited",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 121,
+        "fields": {
+            "stock_symbol": "OLPL",
+            "stock_name": "OLP Financial Services Pakistan Limited",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 122,
+        "fields": {
+            "stock_symbol": "PASL",
+            "stock_name": "Pervez Ahmed Consultancy Services Ltd.",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 123,
+        "fields": {
+            "stock_symbol": "PIAHCLA",
+            "stock_name": "PIA Holding Company Limited",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 124,
+        "fields": {
+            "stock_symbol": "PIAHCLB",
+            "stock_name": "PIA Holding Company LimitedB",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 125,
+        "fields": {
+            "stock_symbol": "PRIB",
+            "stock_name": "Prudential Investment Bank Limited",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 126,
+        "fields": {
+            "stock_symbol": "PSX",
+            "stock_name": "Pakistan Stock Exchange Limited",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 127,
+        "fields": {
+            "stock_symbol": "SIBL",
+            "stock_name": "Security Investment Bank Limited",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 128,
+        "fields": {
+            "stock_symbol": "TRIBL",
+            "stock_name": "Trust Investment Bank Limited",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 129,
+        "fields": {
+            "stock_symbol": "TSBL",
+            "stock_name": "Trust Securities & Brokerage Limited",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 130,
+        "fields": {
+            "stock_symbol": "BFMOD",
+            "stock_name": "B.F. Modaraba",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 131,
+        "fields": {
+            "stock_symbol": "FANM",
+            "stock_name": "First Al-Noor Modaraba",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 132,
+        "fields": {
+            "stock_symbol": "FCONM",
+            "stock_name": "First Constellation Modaraba",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 133,
+        "fields": {
+            "stock_symbol": "FECM",
+            "stock_name": "First Elite Capital Modaraba",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 134,
+        "fields": {
+            "stock_symbol": "FEM",
+            "stock_name": "First Equity Modaraba",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 135,
+        "fields": {
+            "stock_symbol": "FFLM",
+            "stock_name": "First Fidelity Leasing Modaraba",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 136,
+        "fields": {
+            "stock_symbol": "FHAM",
+            "stock_name": "First Habib Modaraba",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 137,
+        "fields": {
+            "stock_symbol": "FIBLM",
+            "stock_name": "First IBL Modaraba",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 138,
+        "fields": {
+            "stock_symbol": "FIM",
+            "stock_name": "First Investec Modaraba",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 139,
+        "fields": {
+            "stock_symbol": "FIMM",
+            "stock_name": "First Imrooz Modaraba",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 140,
+        "fields": {
+            "stock_symbol": "FNBM",
+            "stock_name": "First National Bank Modaraba",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 141,
+        "fields": {
+            "stock_symbol": "FPJM",
+            "stock_name": "First Punjab Modaraba",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 142,
+        "fields": {
+            "stock_symbol": "FPRM",
+            "stock_name": "First Paramount Modaraba",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 143,
+        "fields": {
+            "stock_symbol": "FTMM",
+            "stock_name": "First Treet Modaraba",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 144,
+        "fields": {
+            "stock_symbol": "FTSM",
+            "stock_name": "First Tri-Star Modaraba",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 145,
+        "fields": {
+            "stock_symbol": "GEMBCEM",
+            "stock_name": "Burj Clean Energy Modaraba (GEM)",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 146,
+        "fields": {
+            "stock_symbol": "OLPM",
+            "stock_name": "OLP Modaraba",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 147,
+        "fields": {
+            "stock_symbol": "ORM",
+            "stock_name": "Orient Rental Mod",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 148,
+        "fields": {
+            "stock_symbol": "PIM",
+            "stock_name": "Popular Islamic Modaraba",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 149,
+        "fields": {
+            "stock_symbol": "PMI",
+            "stock_name": "First Prudential Modaraba",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 150,
+        "fields": {
+            "stock_symbol": "SINDM",
+            "stock_name": "Sindh Modaraba",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 151,
+        "fields": {
+            "stock_symbol": "TRSM",
+            "stock_name": "Trust Modaraba",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 152,
+        "fields": {
+            "stock_symbol": "UCAPM",
+            "stock_name": "Unicap Modaraba",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 153,
+        "fields": {
+            "stock_symbol": "HGFA",
+            "stock_name": "HBL Growth Fund",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 154,
+        "fields": {
+            "stock_symbol": "HIFA",
+            "stock_name": "HBL Investment Fund",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 155,
+        "fields": {
+            "stock_symbol": "INFM",
+            "stock_name": "Investec Mutual Fund Limited",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 156,
+        "fields": {
+            "stock_symbol": "PUDF",
+            "stock_name": "Prudential Stocks Fund Limited",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 157,
+        "fields": {
+            "stock_symbol": "TSMF",
+            "stock_name": "Tri-Star Mutual Fund",
+            "sector": "Banking & Finance"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 158,
+        "fields": {
+            "stock_symbol": "AGHA",
+            "stock_name": "Agha Steel Ind. Ltd",
+            "sector": "Engineering"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 159,
+        "fields": {
+            "stock_symbol": "ASL",
+            "stock_name": "Aisha Steel Mills Limited",
+            "sector": "Engineering"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 160,
+        "fields": {
+            "stock_symbol": "ASTL",
+            "stock_name": "Amreli Steels Limited",
+            "sector": "Engineering"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 161,
+        "fields": {
+            "stock_symbol": "BCL",
+            "stock_name": "Bolan Castings Limited",
+            "sector": "Engineering"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 162,
+        "fields": {
+            "stock_symbol": "BECO",
+            "stock_name": "Beco Steel Limited",
+            "sector": "Engineering"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 163,
+        "fields": {
+            "stock_symbol": "CSAP",
+            "stock_name": "Crescent Steel & Allied Products Limited",
+            "sector": "Engineering"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 164,
+        "fields": {
+            "stock_symbol": "DADX",
+            "stock_name": "Dadex Eternit Limited",
+            "sector": "Engineering"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 165,
+        "fields": {
+            "stock_symbol": "DSL",
+            "stock_name": "Dost Steels Limited",
+            "sector": "Engineering"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 166,
+        "fields": {
+            "stock_symbol": "HSPI",
+            "stock_name": "Huffaz Seamless Pipe Industries Limited",
+            "sector": "Engineering"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 167,
+        "fields": {
+            "stock_symbol": "INIL",
+            "stock_name": "International Industries Limited",
+            "sector": "Engineering"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 168,
+        "fields": {
+            "stock_symbol": "ISL",
+            "stock_name": "International Steels Limited",
+            "sector": "Engineering"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 169,
+        "fields": {
+            "stock_symbol": "ITTEFAQ",
+            "stock_name": "Ittefaq Iron Industries Limited",
+            "sector": "Engineering"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 170,
+        "fields": {
+            "stock_symbol": "KSBP",
+            "stock_name": "KSB Pumps Company Limited",
+            "sector": "Engineering"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 171,
+        "fields": {
+            "stock_symbol": "MSCL",
+            "stock_name": "Metropolitan Steel Corporation Limited",
+            "sector": "Engineering"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 172,
+        "fields": {
+            "stock_symbol": "MUGHAL",
+            "stock_name": "Mughal Iron & Steel Industries Limited",
+            "sector": "Engineering"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 173,
+        "fields": {
+            "stock_symbol": "PECO",
+            "stock_name": "Pakistan Engineering Company Limited",
+            "sector": "Engineering"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 174,
+        "fields": {
+            "stock_symbol": "AHCL",
+            "stock_name": "Arif Habib Corporation Limited",
+            "sector": "Fertilizer"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 175,
+        "fields": {
+            "stock_symbol": "EFERT",
+            "stock_name": "Engro Fertilizers Limited",
+            "sector": "Fertilizer"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 176,
+        "fields": {
+            "stock_symbol": "ENGRO",
+            "stock_name": "Engro Corporation Limited",
+            "sector": "Fertilizer"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 177,
+        "fields": {
+            "stock_symbol": "FATIMA",
+            "stock_name": "Fatima Fertilizer Company Limited",
+            "sector": "Fertilizer"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 178,
+        "fields": {
+            "stock_symbol": "FFC",
+            "stock_name": "Fauji Fertilizer Company Limited",
+            "sector": "Fertilizer"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 179,
+        "fields": {
+            "stock_symbol": "ASC",
+            "stock_name": "Al Shaheer Corporation Limited",
+            "sector": "FMCG"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 180,
+        "fields": {
+            "stock_symbol": "BBFL",
+            "stock_name": "Big Bird Foods Limited",
+            "sector": "FMCG"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 181,
+        "fields": {
+            "stock_symbol": "BNL",
+            "stock_name": "Bunnys Limited",
+            "sector": "FMCG"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 182,
+        "fields": {
+            "stock_symbol": "CLOV",
+            "stock_name": "Clover Pakistan Limited",
+            "sector": "FMCG"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 183,
+        "fields": {
+            "stock_symbol": "COLG",
+            "stock_name": "Colgate-Palmolive (Pakistan) Limited",
+            "sector": "FMCG"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 184,
+        "fields": {
+            "stock_symbol": "FCEPL",
+            "stock_name": "Frieslandcampina Engro Pakistan Limited",
+            "sector": "FMCG"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 185,
+        "fields": {
+            "stock_symbol": "FFL",
+            "stock_name": "Fauji Foods Limited",
+            "sector": "FMCG"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 186,
+        "fields": {
+            "stock_symbol": "GIL",
+            "stock_name": "Good Luck Industries Ltd.",
+            "sector": "FMCG"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 187,
+        "fields": {
+            "stock_symbol": "GLPL",
+            "stock_name": "Gillette Pakistan Limited",
+            "sector": "FMCG"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 188,
+        "fields": {
+            "stock_symbol": "ISIL",
+            "stock_name": "Ismail Industries Limited",
+            "sector": "FMCG"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 189,
+        "fields": {
+            "stock_symbol": "MFFL",
+            "stock_name": "Mitchells Fruit Farms Limited",
+            "sector": "FMCG"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 190,
+        "fields": {
+            "stock_symbol": "MFL",
+            "stock_name": "Matco Foods Limited",
+            "sector": "FMCG"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 191,
+        "fields": {
+            "stock_symbol": "MUREB",
+            "stock_name": "Murree Brewery Company Limited",
+            "sector": "FMCG"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 192,
+        "fields": {
+            "stock_symbol": "NATF",
+            "stock_name": "National Foods Limited",
+            "sector": "FMCG"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 193,
+        "fields": {
+            "stock_symbol": "NESTLE",
+            "stock_name": "Nestle Pakistan Limited",
+            "sector": "FMCG"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 194,
+        "fields": {
+            "stock_symbol": "NMFL",
+            "stock_name": "Nirala MSR Foods Limited",
+            "sector": "FMCG"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 195,
+        "fields": {
+            "stock_symbol": "PREMA",
+            "stock_name": "At-Tahur Limited",
+            "sector": "FMCG"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 196,
+        "fields": {
+            "stock_symbol": "QUICE",
+            "stock_name": "Quice Food Industries Limited",
+            "sector": "FMCG"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 197,
+        "fields": {
+            "stock_symbol": "RMPL",
+            "stock_name": "Rafhan Maize Products Company Limited",
+            "sector": "FMCG"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 198,
+        "fields": {
+            "stock_symbol": "SCL",
+            "stock_name": "Shield Corporation Limited",
+            "sector": "FMCG"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 199,
+        "fields": {
+            "stock_symbol": "SHEZ",
+            "stock_name": "Shezan International Limited",
+            "sector": "FMCG"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 200,
+        "fields": {
+            "stock_symbol": "TOMCL",
+            "stock_name": "The Organic Meat Company Limited",
+            "sector": "FMCG"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 201,
+        "fields": {
+            "stock_symbol": "TREET",
+            "stock_name": "Treet Corporation Limited",
+            "sector": "FMCG"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 202,
+        "fields": {
+            "stock_symbol": "UNITY",
+            "stock_name": "Unity Foods Limited",
+            "sector": "FMCG"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 203,
+        "fields": {
+            "stock_symbol": "UPFL",
+            "stock_name": "Unilever Pakistan Foods Limited",
+            "sector": "FMCG"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 204,
+        "fields": {
+            "stock_symbol": "ZIL",
+            "stock_name": "ZIL Limited",
+            "sector": "FMCG"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 205,
+        "fields": {
+            "stock_symbol": "CJPL",
+            "stock_name": "Crescent Jute Products Limited",
+            "sector": "FMCG"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 206,
+        "fields": {
+            "stock_symbol": "SUHJ",
+            "stock_name": "Suhail Jute Mills Limited",
+            "sector": "FMCG"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 207,
+        "fields": {
+            "stock_symbol": "KHTC",
+            "stock_name": "Khyber Tobacco Company Limited",
+            "sector": "FMCG"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 208,
+        "fields": {
+            "stock_symbol": "PAKT",
+            "stock_name": "Pakistan Tobacco Company Limited",
+            "sector": "FMCG"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 209,
+        "fields": {
+            "stock_symbol": "PMPK",
+            "stock_name": "Philip Morris (Pakistan) Limited",
+            "sector": "FMCG"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 210,
+        "fields": {
+            "stock_symbol": "POML",
+            "stock_name": "Punjab Oil Mills Limited",
+            "sector": "FMCG"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 211,
+        "fields": {
+            "stock_symbol": "SSOM",
+            "stock_name": "S.S.Oil Mills Limited",
+            "sector": "FMCG"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 212,
+        "fields": {
+            "stock_symbol": "SURAJ",
+            "stock_name": "Suraj Ghee Industries Limited",
+            "sector": "FMCG"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 213,
+        "fields": {
+            "stock_symbol": "BGL",
+            "stock_name": "Baluchistan Glass Limited",
+            "sector": "Glass & Ceramics"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 214,
+        "fields": {
+            "stock_symbol": "FRCL",
+            "stock_name": "Frontier Ceramics Limited",
+            "sector": "Glass & Ceramics"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 215,
+        "fields": {
+            "stock_symbol": "GGGL",
+            "stock_name": "Ghani Global Glass Limited",
+            "sector": "Glass & Ceramics"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 216,
+        "fields": {
+            "stock_symbol": "GHGL",
+            "stock_name": "Ghani Glass Limited",
+            "sector": "Glass & Ceramics"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 217,
+        "fields": {
+            "stock_symbol": "GVGL",
+            "stock_name": "Ghani Value Glass Limited",
+            "sector": "Glass & Ceramics"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 218,
+        "fields": {
+            "stock_symbol": "KCL",
+            "stock_name": "Karam Ceramics Limited",
+            "sector": "Glass & Ceramics"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 219,
+        "fields": {
+            "stock_symbol": "REGAL",
+            "stock_name": "Regal Ceramics Limited",
+            "sector": "Glass & Ceramics"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 220,
+        "fields": {
+            "stock_symbol": "STCL",
+            "stock_name": "Shabbir Tiles & Ceramics Limited",
+            "sector": "Glass & Ceramics"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 221,
+        "fields": {
+            "stock_symbol": "TGL",
+            "stock_name": "Tariq Glass Industries Limited",
+            "sector": "Glass & Ceramics"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 222,
+        "fields": {
+            "stock_symbol": "AGIC",
+            "stock_name": "Askari General Insurance Company Limited",
+            "sector": "Insurance & Leasing"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 223,
+        "fields": {
+            "stock_symbol": "AICL",
+            "stock_name": "Adamjee Insurance Company Limited",
+            "sector": "Insurance & Leasing"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 224,
+        "fields": {
+            "stock_symbol": "ALAC",
+            "stock_name": "Askari Life Assurance Company Limited",
+            "sector": "Insurance & Leasing"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 225,
+        "fields": {
+            "stock_symbol": "ALIFE",
+            "stock_name": "Adamjee Life Assurance Company Limited",
+            "sector": "Insurance & Leasing"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 226,
+        "fields": {
+            "stock_symbol": "ASIC",
+            "stock_name": "Asia Insurance Company Limited",
+            "sector": "Insurance & Leasing"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 227,
+        "fields": {
+            "stock_symbol": "ATIL",
+            "stock_name": "Atlas Insurance Limited",
+            "sector": "Insurance & Leasing"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 228,
+        "fields": {
+            "stock_symbol": "BIIC",
+            "stock_name": "Business & Industrial Insurance Company",
+            "sector": "Insurance & Leasing"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 229,
+        "fields": {
+            "stock_symbol": "CENI",
+            "stock_name": "Century Insurance Company Limited",
+            "sector": "Insurance & Leasing"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 230,
+        "fields": {
+            "stock_symbol": "CSIL",
+            "stock_name": "Crescent Star Insurance Limited",
+            "sector": "Insurance & Leasing"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 231,
+        "fields": {
+            "stock_symbol": "EFUG",
+            "stock_name": "EFU General Insurance Limited",
+            "sector": "Insurance & Leasing"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 232,
+        "fields": {
+            "stock_symbol": "EFUL",
+            "stock_name": "EFU Life Assurance Limited",
+            "sector": "Insurance & Leasing"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 233,
+        "fields": {
+            "stock_symbol": "EWIC",
+            "stock_name": "East West Insurance Company Limited",
+            "sector": "Insurance & Leasing"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 234,
+        "fields": {
+            "stock_symbol": "HICL",
+            "stock_name": "Habib Insurance Company Limited",
+            "sector": "Insurance & Leasing"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 235,
+        "fields": {
+            "stock_symbol": "IGIHL",
+            "stock_name": "IGI Holdings Limited",
+            "sector": "Insurance & Leasing"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 236,
+        "fields": {
+            "stock_symbol": "IGIL",
+            "stock_name": "IGI Life Insurance Limited",
+            "sector": "Insurance & Leasing"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 237,
+        "fields": {
+            "stock_symbol": "JGICL",
+            "stock_name": "Jubilee General Insurance Limited",
+            "sector": "Insurance & Leasing"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 238,
+        "fields": {
+            "stock_symbol": "JLICL",
+            "stock_name": "Jubilee Life Insurance Company Limited",
+            "sector": "Insurance & Leasing"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 239,
+        "fields": {
+            "stock_symbol": "PAKRI",
+            "stock_name": "Pakistan Reinsurance Company Limited",
+            "sector": "Insurance & Leasing"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 240,
+        "fields": {
+            "stock_symbol": "PIL",
+            "stock_name": "PICIC Insurance Limited",
+            "sector": "Insurance & Leasing"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 241,
+        "fields": {
+            "stock_symbol": "PINL",
+            "stock_name": "Premier Insurance Limited",
+            "sector": "Insurance & Leasing"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 242,
+        "fields": {
+            "stock_symbol": "PKGI",
+            "stock_name": "The Pakistan General Insurance Co. Ltd.",
+            "sector": "Insurance & Leasing"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 243,
+        "fields": {
+            "stock_symbol": "PRIC",
+            "stock_name": "Progressive Insurance Company Limited",
+            "sector": "Insurance & Leasing"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 244,
+        "fields": {
+            "stock_symbol": "RICL",
+            "stock_name": "Reliance Insurance Company Limited",
+            "sector": "Insurance & Leasing"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 245,
+        "fields": {
+            "stock_symbol": "SHNI",
+            "stock_name": "Shaheen Insurance Company Limited",
+            "sector": "Insurance & Leasing"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 246,
+        "fields": {
+            "stock_symbol": "SICL",
+            "stock_name": "Standard Insurance Company Limited",
+            "sector": "Insurance & Leasing"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 247,
+        "fields": {
+            "stock_symbol": "SSIC",
+            "stock_name": "Silver Star Insurance Company Limited",
+            "sector": "Insurance & Leasing"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 248,
+        "fields": {
+            "stock_symbol": "TPLI",
+            "stock_name": "TPL Insurance Limited",
+            "sector": "Insurance & Leasing"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 249,
+        "fields": {
+            "stock_symbol": "UNIC",
+            "stock_name": "The United Insurance Company",
+            "sector": "Insurance & Leasing"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 250,
+        "fields": {
+            "stock_symbol": "UVIC",
+            "stock_name": "The Universal Insurance Company Limited",
+            "sector": "Insurance & Leasing"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 251,
+        "fields": {
+            "stock_symbol": "ENGL",
+            "stock_name": "English Leasing Limited",
+            "sector": "Insurance & Leasing"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 252,
+        "fields": {
+            "stock_symbol": "GRYL",
+            "stock_name": "Grays Leasing Limited",
+            "sector": "Insurance & Leasing"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 253,
+        "fields": {
+            "stock_symbol": "PGLC",
+            "stock_name": "Pak-Gulf Leasing Company Limited",
+            "sector": "Insurance & Leasing"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 254,
+        "fields": {
+            "stock_symbol": "PICL",
+            "stock_name": "Pakistan Industrial & Commercial Leasing",
+            "sector": "Insurance & Leasing"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 255,
+        "fields": {
+            "stock_symbol": "SLCL",
+            "stock_name": "Security Leasing Corporation Limited",
+            "sector": "Insurance & Leasing"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 256,
+        "fields": {
+            "stock_symbol": "SLL",
+            "stock_name": "SME Leasing Limited",
+            "sector": "Insurance & Leasing"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 257,
+        "fields": {
+            "stock_symbol": "SPLC",
+            "stock_name": "Saudi Pak Leasing Company Limited",
+            "sector": "Insurance & Leasing"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 258,
+        "fields": {
+            "stock_symbol": "BATA",
+            "stock_name": "Bata Pakistan Limited",
+            "sector": "Leather"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 259,
+        "fields": {
+            "stock_symbol": "FIL",
+            "stock_name": "Fateh Industries Limited",
+            "sector": "Leather"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 260,
+        "fields": {
+            "stock_symbol": "LEUL",
+            "stock_name": "Leather Up Limited",
+            "sector": "Leather"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 261,
+        "fields": {
+            "stock_symbol": "PAKL",
+            "stock_name": "Pak Leather Crafts Limited",
+            "sector": "Leather"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 262,
+        "fields": {
+            "stock_symbol": "SGF",
+            "stock_name": "Service GlobalFootwear Limited",
+            "sector": "Leather"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 263,
+        "fields": {
+            "stock_symbol": "SRVI",
+            "stock_name": "Service Industries Limited",
+            "sector": "Leather"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 264,
+        "fields": {
+            "stock_symbol": "AKDHL",
+            "stock_name": "AKD Hospitality Limited",
+            "sector": "Miscellaneous"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 265,
+        "fields": {
+            "stock_symbol": "AKGL",
+            "stock_name": "Al-Khair Gadoon Limited",
+            "sector": "Miscellaneous"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 266,
+        "fields": {
+            "stock_symbol": "ARPAK",
+            "stock_name": "Arpak International Investments Ltd.",
+            "sector": "Miscellaneous"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 267,
+        "fields": {
+            "stock_symbol": "DCTL",
+            "stock_name": "Dadabhoy Construction Technology Limited",
+            "sector": "Miscellaneous"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 268,
+        "fields": {
+            "stock_symbol": "DIIL",
+            "stock_name": "Diamond Industries Limited",
+            "sector": "Miscellaneous"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 269,
+        "fields": {
+            "stock_symbol": "ECOP",
+            "stock_name": "Ecopack Limited",
+            "sector": "Miscellaneous"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 270,
+        "fields": {
+            "stock_symbol": "GAMON",
+            "stock_name": "Gammon Pakistan Limited",
+            "sector": "Miscellaneous"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 271,
+        "fields": {
+            "stock_symbol": "GOC",
+            "stock_name": "GOC (Pak) Limited.",
+            "sector": "Miscellaneous"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 272,
+        "fields": {
+            "stock_symbol": "HADC",
+            "stock_name": "Haydari Construction Company Limited",
+            "sector": "Miscellaneous"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 273,
+        "fields": {
+            "stock_symbol": "MWMP",
+            "stock_name": "Mandviwala Mauser Plastic Industries",
+            "sector": "Miscellaneous"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 274,
+        "fields": {
+            "stock_symbol": "OML",
+            "stock_name": "Olympia Mills Limited",
+            "sector": "Miscellaneous"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 275,
+        "fields": {
+            "stock_symbol": "PABC",
+            "stock_name": "Pakistan Aluminium Beverage Cans Limited",
+            "sector": "Miscellaneous"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 276,
+        "fields": {
+            "stock_symbol": "PHDL",
+            "stock_name": "Pakistan Hotels Developers Limited",
+            "sector": "Miscellaneous"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 277,
+        "fields": {
+            "stock_symbol": "PSEL",
+            "stock_name": "Pakistan Services Limited",
+            "sector": "Miscellaneous"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 278,
+        "fields": {
+            "stock_symbol": "SHFA",
+            "stock_name": "Shifa International Hospitals Limited",
+            "sector": "Miscellaneous"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 279,
+        "fields": {
+            "stock_symbol": "STPL",
+            "stock_name": "Siddiqsons Tin Plate Limited",
+            "sector": "Miscellaneous"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 280,
+        "fields": {
+            "stock_symbol": "TRIPF",
+            "stock_name": "Tri-Pack Films Limited",
+            "sector": "Miscellaneous"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 281,
+        "fields": {
+            "stock_symbol": "UBDL",
+            "stock_name": "United Brands Limited",
+            "sector": "Miscellaneous"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 282,
+        "fields": {
+            "stock_symbol": "UDLI",
+            "stock_name": "UDL International Limited",
+            "sector": "Miscellaneous"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 283,
+        "fields": {
+            "stock_symbol": "UDPL",
+            "stock_name": "United Distributors Pakistan Limited",
+            "sector": "Miscellaneous"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 284,
+        "fields": {
+            "stock_symbol": "MARI",
+            "stock_name": "Mari Petroleum Company Limited",
+            "sector": "Oil, Gas & Power"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 285,
+        "fields": {
+            "stock_symbol": "OGDC",
+            "stock_name": "Oil & Gas Development Company Limited",
+            "sector": "Oil, Gas & Power"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 286,
+        "fields": {
+            "stock_symbol": "POL",
+            "stock_name": "Pakistan Oilfields Limited",
+            "sector": "Oil, Gas & Power"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 287,
+        "fields": {
+            "stock_symbol": "PPL",
+            "stock_name": "Pakistan Petroleum Limited",
+            "sector": "Oil, Gas & Power"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 288,
+        "fields": {
+            "stock_symbol": "APL",
+            "stock_name": "Attock Petroleum Limited",
+            "sector": "Oil, Gas & Power"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 289,
+        "fields": {
+            "stock_symbol": "BPL",
+            "stock_name": "Burshane LPG (Pakistan) Limited",
+            "sector": "Oil, Gas & Power"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 290,
+        "fields": {
+            "stock_symbol": "HASCOL",
+            "stock_name": "Hascol Petroleum Limited",
+            "sector": "Oil, Gas & Power"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 291,
+        "fields": {
+            "stock_symbol": "HTL",
+            "stock_name": "Hi-Tech Lubricants Limited",
+            "sector": "Oil, Gas & Power"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 292,
+        "fields": {
+            "stock_symbol": "OBOY",
+            "stock_name": "Oilboy Energy Limited",
+            "sector": "Oil, Gas & Power"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 293,
+        "fields": {
+            "stock_symbol": "PSO",
+            "stock_name": "Pakistan State Oil Company Limited",
+            "sector": "Oil, Gas & Power"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 294,
+        "fields": {
+            "stock_symbol": "SHEL",
+            "stock_name": "Shell Pakistan Limited",
+            "sector": "Oil, Gas & Power"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 295,
+        "fields": {
+            "stock_symbol": "SNGP",
+            "stock_name": "Sui Northern Gas Pipelines Limited",
+            "sector": "Oil, Gas & Power"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 296,
+        "fields": {
+            "stock_symbol": "SSGC",
+            "stock_name": "Sui Southern Gas Company Limited",
+            "sector": "Oil, Gas & Power"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 297,
+        "fields": {
+            "stock_symbol": "ALTN",
+            "stock_name": "Altern Energy Limited",
+            "sector": "Oil, Gas & Power"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 298,
+        "fields": {
+            "stock_symbol": "EPQL",
+            "stock_name": "Engro Powergen Qadirpur Limited",
+            "sector": "Oil, Gas & Power"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 299,
+        "fields": {
+            "stock_symbol": "GEMMEL",
+            "stock_name": "Mughal Energy Limited(GEM)",
+            "sector": "Oil, Gas & Power"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 300,
+        "fields": {
+            "stock_symbol": "HUBC",
+            "stock_name": "The Hub Power Company Limited",
+            "sector": "Oil, Gas & Power"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 301,
+        "fields": {
+            "stock_symbol": "KAPCO",
+            "stock_name": "Kot Addu Power Company Limited",
+            "sector": "Oil, Gas & Power"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 302,
+        "fields": {
+            "stock_symbol": "KEL",
+            "stock_name": "K-Electric Limited",
+            "sector": "Oil, Gas & Power"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 303,
+        "fields": {
+            "stock_symbol": "KOHE",
+            "stock_name": "Kohinoor Energy Limited",
+            "sector": "Oil, Gas & Power"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 304,
+        "fields": {
+            "stock_symbol": "KOHP",
+            "stock_name": "Kohinoor Power Company Limited",
+            "sector": "Oil, Gas & Power"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 305,
+        "fields": {
+            "stock_symbol": "LPL",
+            "stock_name": "Lalpir Power Limited",
+            "sector": "Oil, Gas & Power"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 306,
+        "fields": {
+            "stock_symbol": "NCPL",
+            "stock_name": "Nishat Chunian Power Limited",
+            "sector": "Oil, Gas & Power"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 307,
+        "fields": {
+            "stock_symbol": "NPL",
+            "stock_name": "Nishat Power Limited",
+            "sector": "Oil, Gas & Power"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 308,
+        "fields": {
+            "stock_symbol": "PKGP",
+            "stock_name": "Pakgen Power Limited",
+            "sector": "Oil, Gas & Power"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 309,
+        "fields": {
+            "stock_symbol": "SEL",
+            "stock_name": "Sitara Energy Limited",
+            "sector": "Oil, Gas & Power"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 310,
+        "fields": {
+            "stock_symbol": "SGPL",
+            "stock_name": "S.G. Power Limited",
+            "sector": "Oil, Gas & Power"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 311,
+        "fields": {
+            "stock_symbol": "SPWL",
+            "stock_name": "Saif Power Limited",
+            "sector": "Oil, Gas & Power"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 312,
+        "fields": {
+            "stock_symbol": "TSPL",
+            "stock_name": "Tri-Star Power Limited",
+            "sector": "Oil, Gas & Power"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 313,
+        "fields": {
+            "stock_symbol": "ATRL",
+            "stock_name": "Attock Refinery Limited",
+            "sector": "Oil, Gas & Power"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 314,
+        "fields": {
+            "stock_symbol": "CNERGY",
+            "stock_name": "Cnergyico PK Limited",
+            "sector": "Oil, Gas & Power"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 315,
+        "fields": {
+            "stock_symbol": "NRL",
+            "stock_name": "National Refinery Limited",
+            "sector": "Oil, Gas & Power"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 316,
+        "fields": {
+            "stock_symbol": "PRL",
+            "stock_name": "Pakistan Refinery Limited",
+            "sector": "Oil, Gas & Power"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 317,
+        "fields": {
+            "stock_symbol": "ABSON",
+            "stock_name": "Abson Industries Limited",
+            "sector": "Paper, Board, Packaging"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 318,
+        "fields": {
+            "stock_symbol": "CEPB",
+            "stock_name": "Century Paper & Board Mills Limited",
+            "sector": "Paper, Board, Packaging"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 319,
+        "fields": {
+            "stock_symbol": "CPPL",
+            "stock_name": "Cherat Packaging Limited",
+            "sector": "Paper, Board, Packaging"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 320,
+        "fields": {
+            "stock_symbol": "DBSL",
+            "stock_name": "Dadabhoy Sack Limited",
+            "sector": "Paper, Board, Packaging"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 321,
+        "fields": {
+            "stock_symbol": "GEMPAPL",
+            "stock_name": "Pak Agro Packaging Limited(GEM)",
+            "sector": "Paper, Board, Packaging"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 322,
+        "fields": {
+            "stock_symbol": "IPAK",
+            "stock_name": "International Packaging Films Limited",
+            "sector": "Paper, Board, Packaging"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 323,
+        "fields": {
+            "stock_symbol": "MACFL",
+            "stock_name": "MACPAC Films Limited",
+            "sector": "Paper, Board, Packaging"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 324,
+        "fields": {
+            "stock_symbol": "MERIT",
+            "stock_name": "Merit Packaging Limited",
+            "sector": "Paper, Board, Packaging"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 325,
+        "fields": {
+            "stock_symbol": "PKGS",
+            "stock_name": "Packages Limited",
+            "sector": "Paper, Board, Packaging"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 326,
+        "fields": {
+            "stock_symbol": "PPP",
+            "stock_name": "Pakistan Paper Products Limited",
+            "sector": "Paper, Board, Packaging"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 327,
+        "fields": {
+            "stock_symbol": "RPL",
+            "stock_name": "Roshan Packages Limited",
+            "sector": "Paper, Board, Packaging"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 328,
+        "fields": {
+            "stock_symbol": "SEPL",
+            "stock_name": "Security Papers Limited",
+            "sector": "Paper, Board, Packaging"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 329,
+        "fields": {
+            "stock_symbol": "SPEL",
+            "stock_name": "Synthetic Products Enterprises Limited",
+            "sector": "Paper, Board, Packaging"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 330,
+        "fields": {
+            "stock_symbol": "ABOT",
+            "stock_name": "Abbott Laboratories (Pakistan) Limited",
+            "sector": "Pharmaceuticals"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 331,
+        "fields": {
+            "stock_symbol": "AGP",
+            "stock_name": "AGP Limited",
+            "sector": "Pharmaceuticals"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 332,
+        "fields": {
+            "stock_symbol": "BFBIO",
+            "stock_name": "BF Biosciences Limited",
+            "sector": "Pharmaceuticals"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 333,
+        "fields": {
+            "stock_symbol": "CPHL",
+            "stock_name": "Citi Pharma Ltd.",
+            "sector": "Pharmaceuticals"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 334,
+        "fields": {
+            "stock_symbol": "FEROZ",
+            "stock_name": "Ferozsons Laboratories Limited",
+            "sector": "Pharmaceuticals"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 335,
+        "fields": {
+            "stock_symbol": "GLAXO",
+            "stock_name": "GlaxoSmithKline Pakistan Limited",
+            "sector": "Pharmaceuticals"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 336,
+        "fields": {
+            "stock_symbol": "HALEON",
+            "stock_name": "Haleon Pakistan Limited",
+            "sector": "Pharmaceuticals"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 337,
+        "fields": {
+            "stock_symbol": "HINOON",
+            "stock_name": "Highnoon Laboratories Limited",
+            "sector": "Pharmaceuticals"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 338,
+        "fields": {
+            "stock_symbol": "HPL",
+            "stock_name": "Hoechst Pakistan Limited",
+            "sector": "Pharmaceuticals"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 339,
+        "fields": {
+            "stock_symbol": "IBLHL",
+            "stock_name": "IBL HealthCare Limited",
+            "sector": "Pharmaceuticals"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 340,
+        "fields": {
+            "stock_symbol": "LIVEN",
+            "stock_name": "Liven Pharma Limited",
+            "sector": "Pharmaceuticals"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 341,
+        "fields": {
+            "stock_symbol": "MACTER",
+            "stock_name": "Macter International Limited",
+            "sector": "Pharmaceuticals"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 342,
+        "fields": {
+            "stock_symbol": "OTSU",
+            "stock_name": "Otsuka Pakistan Limited",
+            "sector": "Pharmaceuticals"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 343,
+        "fields": {
+            "stock_symbol": "SEARL",
+            "stock_name": "The Searle Company Limited",
+            "sector": "Pharmaceuticals"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 344,
+        "fields": {
+            "stock_symbol": "AABS",
+            "stock_name": "Al-Abbas Sugar Mills Limited",
+            "sector": "Sugar"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 345,
+        "fields": {
+            "stock_symbol": "ADAMS",
+            "stock_name": "Adam Sugar Mills Limited",
+            "sector": "Sugar"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 346,
+        "fields": {
+            "stock_symbol": "AGSML",
+            "stock_name": "Abdullah Shah Ghazi Sugar Mills Limited",
+            "sector": "Sugar"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 347,
+        "fields": {
+            "stock_symbol": "ALNRS",
+            "stock_name": "Al-Noor Sugar Mills Limited",
+            "sector": "Sugar"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 348,
+        "fields": {
+            "stock_symbol": "ANSM",
+            "stock_name": "Ansari Sugar Mills Limited",
+            "sector": "Sugar"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 349,
+        "fields": {
+            "stock_symbol": "BAFS",
+            "stock_name": "Baba Farid Sugar Mills Limited",
+            "sector": "Sugar"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 350,
+        "fields": {
+            "stock_symbol": "CHAS",
+            "stock_name": "Chashma Sugar Mills Limited",
+            "sector": "Sugar"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 351,
+        "fields": {
+            "stock_symbol": "DWSM",
+            "stock_name": "Dewan Sugar Mills Limited",
+            "sector": "Sugar"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 352,
+        "fields": {
+            "stock_symbol": "FRSM",
+            "stock_name": "Faran Sugar Mills Limited",
+            "sector": "Sugar"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 353,
+        "fields": {
+            "stock_symbol": "HABSM",
+            "stock_name": "Habib Sugar Mills Limited",
+            "sector": "Sugar"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 354,
+        "fields": {
+            "stock_symbol": "HRPL",
+            "stock_name": "Habib Rice Product Limited",
+            "sector": "Sugar"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 355,
+        "fields": {
+            "stock_symbol": "HWQS",
+            "stock_name": "Haseeb Waqas Sugar Mills Limited",
+            "sector": "Sugar"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 356,
+        "fields": {
+            "stock_symbol": "JDWS",
+            "stock_name": "JDW Sugar Mills Limited",
+            "sector": "Sugar"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 357,
+        "fields": {
+            "stock_symbol": "JSML",
+            "stock_name": "Jauharabad Sugar Mills Limited",
+            "sector": "Sugar"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 358,
+        "fields": {
+            "stock_symbol": "KPUS",
+            "stock_name": "Khairpur Sugar Mills Limited",
+            "sector": "Sugar"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 359,
+        "fields": {
+            "stock_symbol": "MIRKS",
+            "stock_name": "Mirpurkhas Sugar Mills Limited",
+            "sector": "Sugar"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 360,
+        "fields": {
+            "stock_symbol": "MRNS",
+            "stock_name": "Mehran Sugar Mills Limited",
+            "sector": "Sugar"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 361,
+        "fields": {
+            "stock_symbol": "NONS",
+            "stock_name": "Noon Sugar Mills Limited",
+            "sector": "Sugar"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 362,
+        "fields": {
+            "stock_symbol": "PMRS",
+            "stock_name": "The Premier Sugar Mills",
+            "sector": "Sugar"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 363,
+        "fields": {
+            "stock_symbol": "SANSM",
+            "stock_name": "Sanghar Sugar Mills Limited",
+            "sector": "Sugar"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 364,
+        "fields": {
+            "stock_symbol": "SASML",
+            "stock_name": "Sindh Abadgars Sugar Mills Limited",
+            "sector": "Sugar"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 365,
+        "fields": {
+            "stock_symbol": "SHJS",
+            "stock_name": "Shahtaj Sugar Mills Limited",
+            "sector": "Sugar"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 366,
+        "fields": {
+            "stock_symbol": "SHSML",
+            "stock_name": "Shahmurad Sugar Mills Limited",
+            "sector": "Sugar"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 367,
+        "fields": {
+            "stock_symbol": "SKRS",
+            "stock_name": "Sakrand Sugar Mills Limited",
+            "sector": "Sugar"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 368,
+        "fields": {
+            "stock_symbol": "SML",
+            "stock_name": "Shakarganj Limited",
+            "sector": "Sugar"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 369,
+        "fields": {
+            "stock_symbol": "TCORP",
+            "stock_name": "Tariq Corporation Limited",
+            "sector": "Sugar"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 370,
+        "fields": {
+            "stock_symbol": "TICL",
+            "stock_name": "The Thal Industries Corporation Limited",
+            "sector": "Sugar"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 371,
+        "fields": {
+            "stock_symbol": "TSML",
+            "stock_name": "Tandlianwala Sugar Mills Limited",
+            "sector": "Sugar"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 372,
+        "fields": {
+            "stock_symbol": "AASM",
+            "stock_name": "Al-Abid Silk Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 373,
+        "fields": {
+            "stock_symbol": "DSFL",
+            "stock_name": "Dewan Salman Fibre Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 374,
+        "fields": {
+            "stock_symbol": "GATI",
+            "stock_name": "Gatron (Industries) Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 375,
+        "fields": {
+            "stock_symbol": "IBFL",
+            "stock_name": "Ibrahim Fibres Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 376,
+        "fields": {
+            "stock_symbol": "IMAGE",
+            "stock_name": "Image Pakistan Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 377,
+        "fields": {
+            "stock_symbol": "NAFL",
+            "stock_name": "National Fibres Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 378,
+        "fields": {
+            "stock_symbol": "NSRM",
+            "stock_name": "The National Silk & Rayon Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 379,
+        "fields": {
+            "stock_symbol": "PSYL",
+            "stock_name": "Pakistan Synthetics Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 380,
+        "fields": {
+            "stock_symbol": "RUPL",
+            "stock_name": "Rupali Polyester Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 381,
+        "fields": {
+            "stock_symbol": "SGABL",
+            "stock_name": "SG.Allied Business Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 382,
+        "fields": {
+            "stock_symbol": "ADMM",
+            "stock_name": "Artistic Denim Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 383,
+        "fields": {
+            "stock_symbol": "AHTM",
+            "stock_name": "Ahmad Hassan Textile Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 384,
+        "fields": {
+            "stock_symbol": "ANL",
+            "stock_name": "Azgard Nine Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 385,
+        "fields": {
+            "stock_symbol": "ANTM",
+            "stock_name": "AN Textile Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 386,
+        "fields": {
+            "stock_symbol": "ARUJ",
+            "stock_name": "Aruj Industries Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 387,
+        "fields": {
+            "stock_symbol": "BHAT",
+            "stock_name": "Bhanero Textile Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 388,
+        "fields": {
+            "stock_symbol": "BTL",
+            "stock_name": "Blessed Textiles Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 389,
+        "fields": {
+            "stock_symbol": "CHBL",
+            "stock_name": "Chenab Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 390,
+        "fields": {
+            "stock_symbol": "CRTM",
+            "stock_name": "The Crescent Textile Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 391,
+        "fields": {
+            "stock_symbol": "FASM",
+            "stock_name": "Faisal Spinning Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 392,
+        "fields": {
+            "stock_symbol": "FML",
+            "stock_name": "Feroze1888 Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 393,
+        "fields": {
+            "stock_symbol": "FSWL",
+            "stock_name": "Fateh Sports Wear Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 394,
+        "fields": {
+            "stock_symbol": "FTHM",
+            "stock_name": "Fateh Textile Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 395,
+        "fields": {
+            "stock_symbol": "FZCM",
+            "stock_name": "Fazal Cloth Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 396,
+        "fields": {
+            "stock_symbol": "GATM",
+            "stock_name": "Gul Ahmed Textile Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 397,
+        "fields": {
+            "stock_symbol": "GFIL",
+            "stock_name": "Ghazi Fabrics International Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 398,
+        "fields": {
+            "stock_symbol": "HAEL",
+            "stock_name": "Hala Enterprises Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 399,
+        "fields": {
+            "stock_symbol": "HAFL",
+            "stock_name": "Hafiz Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 400,
+        "fields": {
+            "stock_symbol": "HATM",
+            "stock_name": "Hamid Textile Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 401,
+        "fields": {
+            "stock_symbol": "ILP",
+            "stock_name": "Interloop Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 402,
+        "fields": {
+            "stock_symbol": "INKL",
+            "stock_name": "International Knitwear Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 403,
+        "fields": {
+            "stock_symbol": "JUBS",
+            "stock_name": "Jubilee Spinning & Weaving Mills Ltd.",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 404,
+        "fields": {
+            "stock_symbol": "KAKL",
+            "stock_name": "Kaiser Arts & Krafts Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 405,
+        "fields": {
+            "stock_symbol": "KHYT",
+            "stock_name": "Khyber Textile Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 406,
+        "fields": {
+            "stock_symbol": "KML",
+            "stock_name": "Kohinoor Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 407,
+        "fields": {
+            "stock_symbol": "KOIL",
+            "stock_name": "Kohinoor Industries Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 408,
+        "fields": {
+            "stock_symbol": "KTML",
+            "stock_name": "Kohinoor Textile Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 409,
+        "fields": {
+            "stock_symbol": "MEHT",
+            "stock_name": "Mehmood Textile Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 410,
+        "fields": {
+            "stock_symbol": "MFTM",
+            "stock_name": "Mohammad Farooq Textile Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 411,
+        "fields": {
+            "stock_symbol": "MSOT",
+            "stock_name": "Masood Textile Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 412,
+        "fields": {
+            "stock_symbol": "MUBT",
+            "stock_name": "Mubarak Textile Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 413,
+        "fields": {
+            "stock_symbol": "NCL",
+            "stock_name": "Nishat Chunian Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 414,
+        "fields": {
+            "stock_symbol": "NINA",
+            "stock_name": "Nina Industries Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 415,
+        "fields": {
+            "stock_symbol": "NML",
+            "stock_name": "Nishat Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 416,
+        "fields": {
+            "stock_symbol": "PASM",
+            "stock_name": "Paramount Spinning Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 417,
+        "fields": {
+            "stock_symbol": "QUET",
+            "stock_name": "Quetta Textile Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 418,
+        "fields": {
+            "stock_symbol": "REDCO",
+            "stock_name": "Redco Textiles Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 419,
+        "fields": {
+            "stock_symbol": "REWM",
+            "stock_name": "Reliance Weaving Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 420,
+        "fields": {
+            "stock_symbol": "SAPT",
+            "stock_name": "Sapphire Textile Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 421,
+        "fields": {
+            "stock_symbol": "SCHT",
+            "stock_name": "Schon Textiles Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 422,
+        "fields": {
+            "stock_symbol": "SFAT",
+            "stock_name": "Safa Textiles Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 423,
+        "fields": {
+            "stock_symbol": "SFL",
+            "stock_name": "Sapphire Fibres Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 424,
+        "fields": {
+            "stock_symbol": "STML",
+            "stock_name": "Shams Textile Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 425,
+        "fields": {
+            "stock_symbol": "STYLERS",
+            "stock_name": "Stylers International Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 426,
+        "fields": {
+            "stock_symbol": "SURC",
+            "stock_name": "Suraj Cotton Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 427,
+        "fields": {
+            "stock_symbol": "TAJT",
+            "stock_name": "Taj Textile Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 428,
+        "fields": {
+            "stock_symbol": "TOWL",
+            "stock_name": "Towellers Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 429,
+        "fields": {
+            "stock_symbol": "USMT",
+            "stock_name": "Usman Textile Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 430,
+        "fields": {
+            "stock_symbol": "ZAHID",
+            "stock_name": "Zahidjee Textile Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 431,
+        "fields": {
+            "stock_symbol": "ZHCM",
+            "stock_name": "Zahur Cotton Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 432,
+        "fields": {
+            "stock_symbol": "ASHT",
+            "stock_name": "Ashfaq Textile Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 433,
+        "fields": {
+            "stock_symbol": "HKKT",
+            "stock_name": "Hakkim Textile Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 434,
+        "fields": {
+            "stock_symbol": "ICCI",
+            "stock_name": "ICC Industries Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 435,
+        "fields": {
+            "stock_symbol": "MOHE",
+            "stock_name": "Mohib Exports Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 436,
+        "fields": {
+            "stock_symbol": "PRWM",
+            "stock_name": "Prosperity Weaving Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 437,
+        "fields": {
+            "stock_symbol": "SDOT",
+            "stock_name": "Sadoon Textile Industries Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 438,
+        "fields": {
+            "stock_symbol": "STJT",
+            "stock_name": "Shahtaj Textile Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 439,
+        "fields": {
+            "stock_symbol": "YOUW",
+            "stock_name": "Yousaf Weaving Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 440,
+        "fields": {
+            "stock_symbol": "ZTL",
+            "stock_name": "Zephyr Textiles Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 441,
+        "fields": {
+            "stock_symbol": "BNWM",
+            "stock_name": "Bannu Woollen Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 442,
+        "fields": {
+            "stock_symbol": "AAL",
+            "stock_name": "Agro Allianz Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 443,
+        "fields": {
+            "stock_symbol": "AATM",
+            "stock_name": "Ali Asghar Textile Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 444,
+        "fields": {
+            "stock_symbol": "AMTEX",
+            "stock_name": "Amtex Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 445,
+        "fields": {
+            "stock_symbol": "ANNT",
+            "stock_name": "Annoor Textile Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 446,
+        "fields": {
+            "stock_symbol": "APOT",
+            "stock_name": "Apollo Textile Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 447,
+        "fields": {
+            "stock_symbol": "ARCTM",
+            "stock_name": "Arctic Textile Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 448,
+        "fields": {
+            "stock_symbol": "ASTM",
+            "stock_name": "Asim Textile Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 449,
+        "fields": {
+            "stock_symbol": "AWTX",
+            "stock_name": "Allawasaya Tex. & Finishing Mills Ltd",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 450,
+        "fields": {
+            "stock_symbol": "AZMT",
+            "stock_name": "Azmat Textile Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 451,
+        "fields": {
+            "stock_symbol": "BILF",
+            "stock_name": "Bilal Fibres Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 452,
+        "fields": {
+            "stock_symbol": "CCM",
+            "stock_name": "Crescent Cotton Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 453,
+        "fields": {
+            "stock_symbol": "CFL",
+            "stock_name": "Crescent Fibres Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 454,
+        "fields": {
+            "stock_symbol": "CTM",
+            "stock_name": "Colony Textile Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 455,
+        "fields": {
+            "stock_symbol": "CWSM",
+            "stock_name": "Chakwal Spinning Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 456,
+        "fields": {
+            "stock_symbol": "DFSM",
+            "stock_name": "Dewan Farooque Spinning Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 457,
+        "fields": {
+            "stock_symbol": "DINT",
+            "stock_name": "Din Textile Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 458,
+        "fields": {
+            "stock_symbol": "DKTM",
+            "stock_name": "Dewan Khalid Textile Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 459,
+        "fields": {
+            "stock_symbol": "DMTM",
+            "stock_name": "Dewan Mushtaq Textile Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 460,
+        "fields": {
+            "stock_symbol": "DMTX",
+            "stock_name": "D.M. Textile Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 461,
+        "fields": {
+            "stock_symbol": "DSIL",
+            "stock_name": "D.S. Industries Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 462,
+        "fields": {
+            "stock_symbol": "DWTM",
+            "stock_name": "Dewan Textile Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 463,
+        "fields": {
+            "stock_symbol": "ELCM",
+            "stock_name": "Elahi Cotton Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 464,
+        "fields": {
+            "stock_symbol": "ELSM",
+            "stock_name": "Ellcot Spinning Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 465,
+        "fields": {
+            "stock_symbol": "FAEL",
+            "stock_name": "Fatima Enterprises Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 466,
+        "fields": {
+            "stock_symbol": "GADT",
+            "stock_name": "Gadoon Textile Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 467,
+        "fields": {
+            "stock_symbol": "GLOT",
+            "stock_name": "Globe Textile Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 468,
+        "fields": {
+            "stock_symbol": "GSPM",
+            "stock_name": "Gulshan Spinning Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 469,
+        "fields": {
+            "stock_symbol": "GUSM",
+            "stock_name": "Gulistan Spinning Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 470,
+        "fields": {
+            "stock_symbol": "GUTM",
+            "stock_name": "Gulistan Textile Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 471,
+        "fields": {
+            "stock_symbol": "HAJT",
+            "stock_name": "Hajra Textile Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 472,
+        "fields": {
+            "stock_symbol": "HIRAT",
+            "stock_name": "Hira Textile Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 473,
+        "fields": {
+            "stock_symbol": "HMIM",
+            "stock_name": "Haji Mohammad Ismail Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 474,
+        "fields": {
+            "stock_symbol": "IDRT",
+            "stock_name": "Idrees Textile Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 475,
+        "fields": {
+            "stock_symbol": "IDSM",
+            "stock_name": "Ideal Spinning Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 476,
+        "fields": {
+            "stock_symbol": "IDYM",
+            "stock_name": "Indus Dyeing & Manufacturing Co. Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 477,
+        "fields": {
+            "stock_symbol": "JATM",
+            "stock_name": "J.A. Textile Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 478,
+        "fields": {
+            "stock_symbol": "JDMT",
+            "stock_name": "Janana De Malucho Textile Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 479,
+        "fields": {
+            "stock_symbol": "JKSM",
+            "stock_name": "J.K. Spinning Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 480,
+        "fields": {
+            "stock_symbol": "KOHTM",
+            "stock_name": "Kohat Textile Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 481,
+        "fields": {
+            "stock_symbol": "KOSM",
+            "stock_name": "Kohinoor Spinning Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 482,
+        "fields": {
+            "stock_symbol": "KSTM",
+            "stock_name": "Khalid Siraj Textile Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 483,
+        "fields": {
+            "stock_symbol": "MQTM",
+            "stock_name": "Maqbool Textile Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 484,
+        "fields": {
+            "stock_symbol": "NAGC",
+            "stock_name": "Nagina Cotton Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 485,
+        "fields": {
+            "stock_symbol": "NATM",
+            "stock_name": "Nadeem Textile Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 486,
+        "fields": {
+            "stock_symbol": "NCML",
+            "stock_name": "Nazir Cotton Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 487,
+        "fields": {
+            "stock_symbol": "PRET",
+            "stock_name": "Premium Textile Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 488,
+        "fields": {
+            "stock_symbol": "RCML",
+            "stock_name": "Reliance Cotton Spinning Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 489,
+        "fields": {
+            "stock_symbol": "RUBY",
+            "stock_name": "Ruby Textile Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 490,
+        "fields": {
+            "stock_symbol": "SAIF",
+            "stock_name": "Saif Textile Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 491,
+        "fields": {
+            "stock_symbol": "SANE",
+            "stock_name": "Salman Noman Enterprises Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 492,
+        "fields": {
+            "stock_symbol": "SERT",
+            "stock_name": "Service Industries Textiles Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 493,
+        "fields": {
+            "stock_symbol": "SHCM",
+            "stock_name": "Shadman Cotton Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 494,
+        "fields": {
+            "stock_symbol": "SHDT",
+            "stock_name": "Shadab Textile Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 495,
+        "fields": {
+            "stock_symbol": "SLYT",
+            "stock_name": "Sally Textile Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 496,
+        "fields": {
+            "stock_symbol": "SNAI",
+            "stock_name": "Sana Industries Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 497,
+        "fields": {
+            "stock_symbol": "SSML",
+            "stock_name": "Saritow Spinning Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 498,
+        "fields": {
+            "stock_symbol": "SUTM",
+            "stock_name": "Sunrays Textile Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 499,
+        "fields": {
+            "stock_symbol": "SZTM",
+            "stock_name": "Shahzad Textile Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 500,
+        "fields": {
+            "stock_symbol": "TATM",
+            "stock_name": "Tata Textile Mills Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 501,
+        "fields": {
+            "stock_symbol": "TPLL",
+            "stock_name": "TPL Life Insurance Limited",
+            "sector": "Textile"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 502,
+        "fields": {
+            "stock_symbol": "AIRLINK",
+            "stock_name": "Air Link Communication Limited",
+            "sector": "Technology & Communication"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 503,
+        "fields": {
+            "stock_symbol": "AVN",
+            "stock_name": "Avanceon Limited",
+            "sector": "Technology & Communication"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 504,
+        "fields": {
+            "stock_symbol": "GEMSPNL",
+            "stock_name": "Supernet Limited",
+            "sector": "Technology & Communication"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 505,
+        "fields": {
+            "stock_symbol": "HCL",
+            "stock_name": "Hallmark Company Limited",
+            "sector": "Technology & Communication"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 506,
+        "fields": {
+            "stock_symbol": "HUMNL",
+            "stock_name": "Hum Network Limited",
+            "sector": "Technology & Communication"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 507,
+        "fields": {
+            "stock_symbol": "MDTL",
+            "stock_name": "Media Times Limited",
+            "sector": "Technology & Communication"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 508,
+        "fields": {
+            "stock_symbol": "NETSOL",
+            "stock_name": "NetSol Technologies Limited",
+            "sector": "Technology & Communication"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 509,
+        "fields": {
+            "stock_symbol": "OCTOPUS",
+            "stock_name": "Octopus Digital Limited",
+            "sector": "Technology & Communication"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 510,
+        "fields": {
+            "stock_symbol": "PAKD",
+            "stock_name": "Pak Datacom Limited",
+            "sector": "Technology & Communication"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 511,
+        "fields": {
+            "stock_symbol": "PTC",
+            "stock_name": "Pakistan Telecommunication Company Ltd",
+            "sector": "Technology & Communication"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 512,
+        "fields": {
+            "stock_symbol": "SYM",
+            "stock_name": "Symmetry Group Limited",
+            "sector": "Technology & Communication"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 513,
+        "fields": {
+            "stock_symbol": "SYS",
+            "stock_name": "Systems Limited",
+            "sector": "Technology & Communication"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 514,
+        "fields": {
+            "stock_symbol": "TELE",
+            "stock_name": "Telecard Limited",
+            "sector": "Technology & Communication"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 515,
+        "fields": {
+            "stock_symbol": "TPL",
+            "stock_name": "TPL Corp Limited",
+            "sector": "Technology & Communication"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 516,
+        "fields": {
+            "stock_symbol": "TPLT",
+            "stock_name": "TPL Trakker Limited",
+            "sector": "Technology & Communication"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 517,
+        "fields": {
+            "stock_symbol": "TRG",
+            "stock_name": "TRG Pakistan Limited",
+            "sector": "Technology & Communication"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 518,
+        "fields": {
+            "stock_symbol": "WTL",
+            "stock_name": "Worldcall Telecom Limited",
+            "sector": "Technology & Communication"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 519,
+        "fields": {
+            "stock_symbol": "CLVL",
+            "stock_name": "Cordoba Logistics & Ventures Limited",
+            "sector": "Transport"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 520,
+        "fields": {
+            "stock_symbol": "GEMBLUEX",
+            "stock_name": "Blue-Ex Limited (GEM)",
+            "sector": "Transport"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 521,
+        "fields": {
+            "stock_symbol": "PIBTL",
+            "stock_name": "Pakistan International Bulk Terminal",
+            "sector": "Transport"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 522,
+        "fields": {
+            "stock_symbol": "PICT",
+            "stock_name": "Pakistan International Container",
+            "sector": "Transport"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 523,
+        "fields": {
+            "stock_symbol": "PNSC",
+            "stock_name": "Pakistan National Shipping Corporation",
+            "sector": "Transport"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 524,
+        "fields": {
+            "stock_symbol": "SLGL",
+            "stock_name": "Secure Logistics Group Limited",
+            "sector": "Transport"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 525,
+        "fields": {
+            "stock_symbol": "DCR",
+            "stock_name": "Dolmen City REIT",
+            "sector": "Real Estate"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 526,
+        "fields": {
+            "stock_symbol": "GRR",
+            "stock_name": "Globe Residency REIT",
+            "sector": "Real Estate"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 527,
+        "fields": {
+            "stock_symbol": "TPLRF1",
+            "stock_name": "TPL REIT Fund I",
+            "sector": "Real Estate"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 528,
+        "fields": {
+            "stock_symbol": "BRRG",
+            "stock_name": "B.R.R Guardian Limited",
+            "sector": "Real Estate"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 529,
+        "fields": {
+            "stock_symbol": "HUSI",
+            "stock_name": "Husein Industries Limited",
+            "sector": "Real Estate"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 530,
+        "fields": {
+            "stock_symbol": "JVDC",
+            "stock_name": "Javedan Corporation Limited",
+            "sector": "Real Estate"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 531,
+        "fields": {
+            "stock_symbol": "PACE",
+            "stock_name": "Pace (Pakistan) Limited",
+            "sector": "Real Estate"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 532,
+        "fields": {
+            "stock_symbol": "TPLP",
+            "stock_name": "TPL Properties Limited",
+            "sector": "Real Estate"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 533,
+        "fields": {
+            "stock_symbol": "ACIETF",
+            "stock_name": "Alfalah Consumer Index (ETF)",
+            "sector": "ETFs"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 534,
+        "fields": {
+            "stock_symbol": "HBLTETF",
+            "stock_name": "HBL Total Treasury (ETF)",
+            "sector": "ETFs"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 535,
+        "fields": {
+            "stock_symbol": "JSGBETF",
+            "stock_name": "JS Global Banking Sector(ETF)",
+            "sector": "ETFs"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 536,
+        "fields": {
+            "stock_symbol": "JSMFETF",
+            "stock_name": "JS Momentum Factor Exchange Traded Fund",
+            "sector": "ETFs"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 537,
+        "fields": {
+            "stock_symbol": "MIIETF",
+            "stock_name": "Mahaana Islamic Index ETF",
+            "sector": "ETFs"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 538,
+        "fields": {
+            "stock_symbol": "MZNPETF",
+            "stock_name": "Meezan Pakistan ETF",
+            "sector": "ETFs"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 539,
+        "fields": {
+            "stock_symbol": "NBPGETF",
+            "stock_name": "NBP Pakistan Growth ETF",
+            "sector": "ETFs"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 540,
+        "fields": {
+            "stock_symbol": "NITGETF",
+            "stock_name": "NIT Pakistan Gateway ETF",
+            "sector": "ETFs"
+        }
+    },
+    {
+        "model": "api.stock",
+        "pk": 541,
+        "fields": {
+            "stock_symbol": "UBLPETF",
+            "stock_name": "UBL Pakistan Enterprise ETF",
+            "sector": "ETFs"
+        }
+    }
+]
