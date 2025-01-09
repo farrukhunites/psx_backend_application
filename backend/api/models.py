@@ -22,62 +22,6 @@ class User(models.Model):
     def __str__(self):
         return f"{self.username} - {self.get_risk_preference_display()}"
     
-class Dashboard(models.Model):
-    user = models.OneToOneField('User', on_delete=models.CASCADE, related_name="dashboard")
-    
-    # Top-Level Values
-    invested_amount = models.DecimalField(max_digits=15, decimal_places=2)
-    current_stock_holding = models.DecimalField(max_digits=15, decimal_places=2)
-    profit_loss = models.CharField(max_length=50)  # e.g., "3.8% Gain"
-    day_change = models.CharField(max_length=50)  # e.g., "-1.2%"
-    
-    # Portfolio Value over Last 10 Days
-    portfolio_values = models.JSONField()  # Django's built-in JSONField
-
-    # Stock Distribution
-    stock_distribution_by_sector = models.JSONField()  # {"Energy": 20, "Banking": 40, "Cement": 40}
-    stock_distribution_by_company = models.JSONField()  # {"OGDC": 20, "HBL": 40, "DGKC": 40}
-
-    # Stock Holdings Table
-    stock_holdings = models.JSONField()  # [{"stock_name": "OGDC", "price_bought": ..., ...}, ...]
-
-    # Stock Suggestions Table
-    stock_suggestions = models.JSONField()  # [{"stock_name": "OGDC", "current_price": ..., ...}, ...]
-
-    def __str__(self):
-        return f"Dashboard of {self.user.username}"
-    
-class Portfolio(models.Model):
-    user = models.OneToOneField('User', on_delete=models.CASCADE, related_name="portfolio")
-
-    invested_amount = models.DecimalField(max_digits=15, decimal_places=2)
-    current_stock_holding = models.DecimalField(max_digits=15, decimal_places=2)
-    profit_loss = models.CharField(max_length=50)  # e.g., "3.8% Gain"
-    profit_loss_value = models.CharField(max_length=50)
-    day_change = models.CharField(max_length=50)
-
-    stock_holding_details = models.JSONField()
-
-    cumulative_return_ytd = models.CharField(max_length=50)
-    cumulative_return_1yr = models.CharField(max_length=50)
-    cumulative_return_5yr = models.CharField(max_length=50)
-
-    risk_level_indicator = models.DecimalField(max_digits=15, decimal_places=2)
-    std = models.DecimalField(max_digits=15, decimal_places=2)
-    beta_coeffecient = models.DecimalField(max_digits=15, decimal_places=2)
-    var = models.DecimalField(max_digits=15, decimal_places=2)
-
-    market_sensitivity = models.CharField(max_length=50)
-    impact = models.CharField(max_length=50)
-
-    top_stocks = models.JSONField()
-    worst_stocks = models.JSONField()
-
-    transaction_history = models.JSONField()
-
-    def __str__(self):
-        return f"Portfolio of {self.user.username}"
-
 class Stock(models.Model):
     stock_symbol = models.CharField(max_length=10, unique=True)
     stock_name = models.CharField(max_length=255)
@@ -85,6 +29,12 @@ class Stock(models.Model):
 
     def __str__(self):
         return self.stock_symbol
+    
+class StockHolding(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    stock = models.ForeignKey(Stock, on_delete=models.CASCADE)
+    price_buy = models.DecimalField(max_digits=15, decimal_places=2, default=0.00)
+    shares = models.IntegerField(default=0)
     
 class StockStatus(models.Model):
     stock = models.ForeignKey('Stock', on_delete=models.CASCADE, related_name="stock_statuses")

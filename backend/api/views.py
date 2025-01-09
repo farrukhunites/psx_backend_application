@@ -2,12 +2,11 @@ from rest_framework import generics, status
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework.exceptions import NotFound
-from django.contrib.auth.hashers import make_password, check_password
+from django.contrib.auth.hashers import check_password
 from rest_framework.generics import RetrieveAPIView
-from .models import User,Dashboard, Stock, StockStatus, Portfolio, Transaction, Watchlist, Alert
-from .serializers import UserSerializer,DashboardSerializer, PortfolioSerializer, StockStatusSerializer, WatchlistSerializer, AlertSerializer
+from .models import User, Stock, StockStatus, Transaction, Watchlist, Alert, StockHolding
+from .serializers import UserSerializer, StockStatusSerializer, WatchlistSerializer, AlertSerializer
 from django.http import JsonResponse
-from django.shortcuts import render
 from django.shortcuts import get_object_or_404
 from decimal import Decimal
 from django.views.decorators.csrf import csrf_exempt
@@ -15,6 +14,7 @@ import json
 from django.core.serializers import serialize
 import numpy as np
 from django.db import IntegrityError
+from django.db.models import Max
 
 
 def calculate_risk_level(ldcp, var, haircut, pe_ratio, one_year_change, ytd_change):
@@ -55,11 +55,11 @@ def calculate_risk_level(ldcp, var, haircut, pe_ratio, one_year_change, ytd_chan
 
     # Normalize the risk score between 0 and 1
     if risk_score <= 0.5:
-        return "low"
+        return ("low", risk_score)
     elif risk_score <= 0.7:
-        return "medium"
+        return ("moderate", risk_score)
     else:
-        return "high"
+        return ("high", risk_score)
 
 class UserListCreate(generics.ListCreateAPIView):
     """
@@ -95,64 +95,6 @@ class LoginUser(APIView):
             return Response({"message": "Login successful!"}, status=status.HTTP_200_OK)
         else:
             return Response({"error": "Invalid username or password."}, status=status.HTTP_400_BAD_REQUEST)
-
-class DashboardView(RetrieveAPIView):
-    queryset = Dashboard.objects.all()
-    serializer_class = DashboardSerializer
-
-    def retrieve(self, request, *args, **kwargs):
-        user_id = kwargs.get("pk")
-        try:
-            dashboard = Dashboard.objects.get(user_id=user_id)
-            serializer = self.get_serializer(dashboard)
-            return Response(serializer.data)
-        except Dashboard.DoesNotExist:
-            # Return empty values if the dashboard does not exist
-            empty_data = {
-                "user": user_id,
-                "invested_amount": 0.0,
-                "current_stock_holding": 0.0,
-                "profit_loss": "",
-                "day_change": "",
-                "portfolio_values": [],
-                "stock_distribution_by_sector": {},
-                "stock_distribution_by_company": {},
-                "stock_holdings": [],
-                "stock_suggestions": [],
-            }
-            return Response(empty_data, status=status.HTTP_200_OK)
-
-class PortfolioView(APIView):
-    def get(self, request, *args, **kwargs):
-        user_id = kwargs.get("pk")
-        try:
-            portfolio = Portfolio.objects.get(user_id=user_id)
-            serializer = PortfolioSerializer(portfolio)
-            return Response(serializer.data)
-        except Portfolio.DoesNotExist:
-            # Return empty values if the portfolio does not exist
-            empty_data = {
-                "user": user_id,
-                "invested_amount": 0.0,
-                "current_stock_holding": 0.0,
-                "profit_loss": "",
-                "profit_loss_value": "",
-                "day_change": "",
-                "stock_holding_details": [],
-                "cumulative_return_ytd": "",
-                "cumulative_return_1yr": "",
-                "cumulative_return_5yr": "",
-                "risk_level_indicator": 0.0,
-                "std": 0.0,
-                "beta_coeffecient": 0.0,
-                "var": 0.0,
-                "market_sensitivity": "",
-                "impact": "",
-                "top_stocks": [],
-                "worst_stocks": [],
-                "transaction_history": [],
-            }
-            return Response(empty_data, status=status.HTTP_200_OK)
 
 def get_all_stocks(request):
     stocks = list(Stock.objects.values())
@@ -284,23 +226,22 @@ def initialize_dashboard_and_portfolio(user_id):
 
     return dashboard, portfolio
     
-def update_dashboard_and_portfolio(transaction, user_id):
+def update_dashboard_and_portfolio(transaction: Transaction, user_id):
 
     user = get_object_or_404(User, id=user_id)
 
     # Update dashboard and portfolio
-    dashboard, portfolio = initialize_dashboard_and_portfolio(user_id)
+    # dashboard, portfolio = initialize_dashboard_and_portfolio(user_id)
+
+    holdings, created = StockHolding.objects.get_or_create(user=user, stock=transaction.stock)
 
     if transaction.transaction_type == "buy":
-        dashboard.invested_amount += transaction.total_value
-        portfolio.invested_amount += transaction.total_value
+        holdings.price_buy = ((holdings.price_buy*holdings.shares) + Decimal(transaction.price_per_share*transaction.shares))/(holdings.shares+transaction.shares)
+        holdings.shares += transaction.shares
     elif transaction.transaction_type == "sell":
-        dashboard.invested_amount -= transaction.total_value
-        portfolio.invested_amount -= transaction.total_value
+        holdings.shares -= transaction.shares
 
-    # Save updated data
-    dashboard.save()
-    portfolio.save()
+    holdings.save()
 
 @csrf_exempt
 def add_transaction(request, user_id):
@@ -376,7 +317,7 @@ class WatchlistCreateAPIView(APIView):
             raise NotFound(detail="Stock status not found for this symbol", code=404)
 
         # Calculate risk level
-        risk_level = calculate_risk_level(
+        risk_level, score = calculate_risk_level(
             stock_status.ldcp, stock_status.var, stock_status.haircut,
             stock_status.pe_ratio, stock_status.one_year_change, stock_status.ytd_change
         )
@@ -430,7 +371,7 @@ class WatchlistListAPIView(APIView):
                     watchlist_entry.volume = latest_stock_status.volume
                     
                     # Recalculate the risk level with the updated stock status
-                    risk_level = calculate_risk_level(
+                    risk_level, score = calculate_risk_level(
                         latest_stock_status.ldcp, latest_stock_status.var, latest_stock_status.haircut,
                         latest_stock_status.pe_ratio, latest_stock_status.one_year_change, latest_stock_status.ytd_change
                     )

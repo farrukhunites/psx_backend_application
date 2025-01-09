@@ -1,14 +1,17 @@
 from django.urls import path
 from . import views
+from .dashboard.views import DashboardView
+from .portfolio.views import PortfolioView
+from .pdf_extract.views import PdfExtractView
 
 urlpatterns = [
     path("user/", views.UserListCreate.as_view(), name="user_list_create"),  
     path("user/<int:pk>/", views.UserDetail.as_view(), name="user_detail"),  
     path("user/login/", views.LoginUser.as_view(), name="login_user"),
 
-    path("user/<int:pk>/dashboard/", views.DashboardView.as_view(), name="user_dashboard"),
+    path("user/<int:user_id>/dashboard/", DashboardView.as_view(), name="user_dashboard"),
 
-    path('portfolio/<int:pk>/', views.PortfolioView.as_view(), name='portfolio-detail'),
+    path('portfolio/<int:user_id>/', PortfolioView.as_view(), name='portfolio-detail'),
 
     path('stocks/', views.get_all_stocks, name='get_all_stocks'),
     path('stocks/<str:stock_symbol>/', views.get_stock_by_symbol, name='get_stock_by_symbol'),
@@ -29,5 +32,7 @@ urlpatterns = [
     path('alerts/create/', views.AlertCreateAPIView.as_view(), name='alert-create'),
     path('alerts/', views.AlertListAPIView.as_view(), name='alert-list'),
     path('alerts/delete/', views.AlertDeleteAPIView.as_view(), name='alert-delete'),
+
+     path('pdf-extract/', PdfExtractView.as_view()),
 
 ]
