@@ -85,30 +85,28 @@ class Command(BaseCommand):
             print(stats_data)
 
             # Create or update StockStatus
-            StockStatus.objects.get_or_create(
+            StockStatus.objects.create(
                 stock=stock,
-                defaults={  # Use defaults for the data fields
-                    'close_price': stats_data.get('close_price', "N/A"),
-                    'change_value': stats_data.get('change_value', "N/A"),
-                    'change_percent': stats_data.get('change_percent', "N/A"),
-                    'open_price': stats_data.get('Open', "N/A"),
-                    'high': stats_data.get('High', "N/A"),
-                    'low': stats_data.get('Low', "N/A"),
-                    'volume': stats_data.get('Volume', "N/A"),
-                    'circuit_breaker': stats_data.get('CIRCUIT BREAKER', "N/A"),
-                    'day_range': stats_data.get('DAY RANGE', "N/A"),
-                    'fifty_two_week_range': stats_data.get('52-WEEK RANGE', "N/A"),
-                    'ask_price': stats_data.get('Ask Price', "N/A"),
-                    'ask_volume': stats_data.get('Ask Volume', "N/A"),
-                    'bid_price': stats_data.get('Bid Price', "N/A"),
-                    'bid_volume': stats_data.get('Bid Volume', "N/A"),
-                    'ldcp': stats_data.get('LDCP', "N/A"),
-                    'var': stats_data.get('VAR', "N/A"),
-                    'haircut': stats_data.get('HAIRCUT', "N/A"),
-                    'pe_ratio': stats_data.get('P/E Ratio (TTM) **', "N/A"),
-                    'one_year_change': stats_data.get('1-Year Change *', "N/A"),
-                    'ytd_change': stats_data.get('YTD Change *', "N/A"),
-                }
+                close_price=stats_data.get('close_price', "N/A"),
+                change_value=stats_data.get('change_value', "N/A"),
+                change_percent=stats_data.get('change_percent', "N/A"),
+                open_price=stats_data.get('Open', "N/A"),
+                high=stats_data.get('High', "N/A"),
+                low=stats_data.get('Low', "N/A"),
+                volume=stats_data.get('Volume', "N/A"),
+                circuit_breaker=stats_data.get('CIRCUIT BREAKER', "N/A"),
+                day_range=stats_data.get('DAY RANGE', "N/A"),
+                fifty_two_week_range=stats_data.get('52-WEEK RANGE', "N/A"),
+                ask_price=stats_data.get('Ask Price', "N/A"),
+                ask_volume=stats_data.get('Ask Volume', "N/A"),
+                bid_price=stats_data.get('Bid Price', "N/A"),
+                bid_volume=stats_data.get('Bid Volume', "N/A"),
+                ldcp=stats_data.get('LDCP', "N/A"),
+                var=stats_data.get('VAR', "N/A"),
+                haircut=stats_data.get('HAIRCUT', "N/A"),
+                pe_ratio=stats_data.get('P/E Ratio (TTM) **', "N/A"),
+                one_year_change=stats_data.get('1-Year Change *', "N/A"),
+                ytd_change=stats_data.get('YTD Change *', "N/A"),
             )
 
             self.stdout.write(f"Added {stock.id} Successfully: {stock}")

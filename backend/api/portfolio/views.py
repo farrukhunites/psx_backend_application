@@ -37,6 +37,9 @@ class PortfolioView(APIView):
 
         holding = StockHolding.objects.filter(user=user_id)
 
+        if not(holding.exists()):
+            return Response(res)
+
         invested = 0
         current_stock_holding = 0
     
@@ -53,7 +56,7 @@ class PortfolioView(APIView):
             status = StockStatus.objects.filter(
                 stock=h.stock
             ).order_by('-date').first()
-            status_close_price = Decimal(status.close_price.replace('Rs.', '').strip())
+            status_close_price = Decimal(str(status.close_price).replace('Rs.', '').replace(',', '').strip())
             
             current_stock_holding += status_close_price*h.shares
             invested += h.shares * h.price_buy
@@ -64,7 +67,14 @@ class PortfolioView(APIView):
             ) * 100
             profit_loss_percentages.append(profit_loss_percentage)
 
-            stock_holdings.append({"stock_name": h.stock.stock_name, "price_bought": h.price_buy, "current_price": status_close_price, "expected": status.circuit_breaker, "day_change": status.change_percent, "profit_loss_value": Decimal(status.change_value)*h.shares, "quantity": h.shares, 'profit_loss': ((Decimal(status.change_value)*h.shares)/(h.shares*h.price_buy))*100})
+            stock_holdings.append({"stock_name": h.stock.stock_name, 
+                                   "price_bought": h.price_buy, 
+                                   "current_price": status_close_price, 
+                                   "expected": status.circuit_breaker, 
+                                   "day_change": status.change_percent, 
+                                   "profit_loss_value": round(Decimal(status_close_price*h.shares)-h.shares*h.price_buy, 2), 
+                                   "quantity": h.shares, 
+                                   'profit_loss': round(((Decimal(status_close_price*h.shares)-h.shares*h.price_buy)/(h.shares*h.price_buy))*100, 2)})
             day_change +=  Decimal(status.change_percent.replace("(", '').replace("%)", '').strip())
 
             latest_date = StockStatus.objects.aggregate(latest_date=Max('date'))['latest_date']
@@ -75,10 +85,10 @@ class PortfolioView(APIView):
                 
             risk_level, risk_score = calculate_risk_level(s.ldcp, s.var, s.haircut, s.pe_ratio, one_year_change, s.ytd_change)
             total_risk_score += risk_score
-            total_var += float(s.var)
+            total_var += float(s.var)*h.shares
 
         res['risk_level_indicator'] = round((total_risk_score/total_count) * 100)
-        res['var'] = (total_var/total_count) * 100
+        res['var'] = round((total_var/total_count) * 100, 2)
 
         if profit_loss_percentages:
             mean_profit_loss = sum(profit_loss_percentages) / len(profit_loss_percentages)
@@ -89,7 +99,7 @@ class PortfolioView(APIView):
         else:
             std_deviation = 0
 
-        res['std'] = std_deviation
+        res['std'] = round(std_deviation, 2)
 
         res['invested_amount'] = invested
         res['current_stock_holding'] = current_stock_holding
@@ -99,8 +109,8 @@ class PortfolioView(APIView):
 
         res['stock_holding_details'] = stock_holdings
         sorted_holdings = sorted(stock_holdings, key=lambda x: x['profit_loss_value'])
-        top_performing = sorted_holdings[:5]
-        worst_performing = sorted_holdings[-5:]
+        top_performing = sorted_holdings[-5:]
+        worst_performing = sorted_holdings[:5]
 
         res['top_stocks'] = top_performing
         res['worst_stocks'] = worst_performing

@@ -29,6 +29,9 @@ class DashboardView(APIView):
 
         holding = StockHolding.objects.filter(user=user_id)
 
+        if not(holding.exists()):
+            return Response(res)
+
         invested = 0
         current_stock_holding = 0
         sector = {}
@@ -42,7 +45,7 @@ class DashboardView(APIView):
             status = StockStatus.objects.filter(
                 stock=h.stock
             ).order_by('-date').first()
-            status_close_price = Decimal(status.close_price.replace('Rs.', '').strip())
+            status_close_price = Decimal(str(status.close_price).replace('Rs.', '').replace(',', '').strip())
             try:
                 sector[h.stock.sector] += status_close_price*h.shares
             except KeyError:
@@ -59,13 +62,15 @@ class DashboardView(APIView):
             stock_holdings.append({"stock_name": h.stock.stock_name, "price_bought": h.price_buy, "current_price": status_close_price, "expected": status.circuit_breaker, "day_change": status.change_percent, "profit_loss": Decimal(status.change_value)*h.shares})
             day_change +=  Decimal(status.change_percent.replace("(", '').replace("%)", '').strip())
         
+        day_change = day_change / holding.count()
+
         stock_distribution_by_sector = []
         for s in sector.keys():
-            stock_distribution_by_sector.append({'x':s, 'y':(sector[s]/current_stock_holding)*100})
+            stock_distribution_by_sector.append({'x':s, 'y':round((sector[s]/current_stock_holding)*100, 2)})
 
         stock_distribution_by_company = []
         for c in company.keys():
-            stock_distribution_by_company.append({'x':c, 'y':(company[c]/current_stock_holding)*100})
+            stock_distribution_by_company.append({'x':c, 'y':round((company[c]/current_stock_holding)*100, 2)})
 
         res['invested_amount'] = invested
         res['current_stock_holding'] = current_stock_holding
@@ -96,7 +101,7 @@ class DashboardView(APIView):
         portfolio = {}
         for s in stock_statuses:
             stock_holding = StockHolding.objects.get(stock=s.stock)
-            status_close_price = Decimal(status.close_price.replace('Rs.', '').strip())
+            status_close_price = Decimal(s.close_price.replace('Rs.', '').replace(',', '').strip())
 
             try:
                 portfolio[s.date] += stock_holding.shares*status_close_price

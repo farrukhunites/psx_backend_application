@@ -236,7 +236,7 @@ def update_dashboard_and_portfolio(transaction: Transaction, user_id):
     holdings, created = StockHolding.objects.get_or_create(user=user, stock=transaction.stock)
 
     if transaction.transaction_type == "buy":
-        holdings.price_buy = ((holdings.price_buy*holdings.shares) + Decimal(transaction.price_per_share*transaction.shares))/(holdings.shares+transaction.shares)
+        holdings.price_buy = (Decimal(holdings.price_buy*holdings.shares) + Decimal(transaction.price_per_share*transaction.shares))/(holdings.shares+transaction.shares)
         holdings.shares += transaction.shares
     elif transaction.transaction_type == "sell":
         holdings.shares -= transaction.shares

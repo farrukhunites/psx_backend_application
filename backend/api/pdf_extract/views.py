@@ -1,3 +1,4 @@
+from decimal import Decimal
 import os
 from rest_framework import status
 from rest_framework.response import Response
@@ -10,6 +11,9 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from django.core.files.storage import FileSystemStorage
 import fitz
+
+from ..models import Stock, Transaction, User
+from ..views import update_dashboard_and_portfolio
 
 def extract_pdf_text(pdf_path):
     # Open the PDF file
@@ -64,12 +68,12 @@ def process_pdf_array(pdf_array):
 
     data = []
     for i in range(0, rows):
-        data.append({"stock_symbol":stock_names[i], "shares": net_quantity[i], "price_per_share": avg_rate[i]})
+        data.append({"stock_symbol":stock_names[i], "shares": Decimal(str(net_quantity[i]).strip()), "price_per_share": Decimal(str(avg_rate[i]).strip())})
 
     return data
 
 class PdfExtractView(APIView):
-    def post(self, request):
+    def post(self, request, user_id):
         if 'file' not in request.FILES:
             return Response({"error": "No file uploaded"}, status=status.HTTP_400_BAD_REQUEST)
 
@@ -83,6 +87,28 @@ class PdfExtractView(APIView):
 
         pdf_text_array = extract_pdf_text(pdf_path)
 
-        res = process_pdf_array(pdf_text_array)
+        data = process_pdf_array(pdf_text_array)
 
-        return Response(res, status=status.HTTP_200_OK)
+        for i in data:
+            stock_symbol = i['stock_symbol']
+            transaction_type = 'buy'
+            shares = i['shares']
+            price_per_share = i['price_per_share']
+
+            # Fetch or create the stock
+            stock, _ = Stock.objects.get_or_create(stock_symbol=stock_symbol)
+            
+            # Create the transaction
+            transaction = Transaction.objects.create(
+                user=User.objects.get(id=user_id),
+                stock=stock,
+                transaction_type=transaction_type,
+                shares=shares,
+                price_per_share=price_per_share,
+            )
+
+            # Update dashboard and portfolio (reuse logic from `update_dashboard_and_portfolio`)
+            update_dashboard_and_portfolio(transaction, user_id)
+
+
+        return Response({"status": "Extraction Successful!", 'data': data}, status=status.HTTP_200_OK)

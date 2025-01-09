@@ -33,6 +33,6 @@ urlpatterns = [
     path('alerts/', views.AlertListAPIView.as_view(), name='alert-list'),
     path('alerts/delete/', views.AlertDeleteAPIView.as_view(), name='alert-delete'),
 
-     path('pdf-extract/', PdfExtractView.as_view()),
+     path('pdf-extract/<int:user_id>/', PdfExtractView.as_view()),
 
 ]
