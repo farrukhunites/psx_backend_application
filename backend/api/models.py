@@ -10,6 +10,8 @@ class User(models.Model):
 
     username = models.CharField(max_length=50, unique=True)
     password = models.CharField(max_length=100)
+    email = models.CharField(max_length=50, unique=True, null=True, blank=True)
+    cdc_id = models.CharField(max_length=100, default="Unknown")
     date_created = models.DateField(auto_now_add=True)
     risk_preference = models.CharField(
         max_length=10,
@@ -45,6 +47,37 @@ class Dashboard(models.Model):
     def __str__(self):
         return f"Dashboard of {self.user.username}"
     
+class Portfolio(models.Model):
+    user = models.OneToOneField('User', on_delete=models.CASCADE, related_name="portfolio")
+
+    invested_amount = models.DecimalField(max_digits=15, decimal_places=2)
+    current_stock_holding = models.DecimalField(max_digits=15, decimal_places=2)
+    profit_loss = models.CharField(max_length=50)  # e.g., "3.8% Gain"
+    profit_loss_value = models.CharField(max_length=50)
+    day_change = models.CharField(max_length=50)
+
+    stock_holding_details = models.JSONField()
+
+    cumulative_return_ytd = models.CharField(max_length=50)
+    cumulative_return_1yr = models.CharField(max_length=50)
+    cumulative_return_5yr = models.CharField(max_length=50)
+
+    risk_level_indicator = models.DecimalField(max_digits=15, decimal_places=2)
+    std = models.DecimalField(max_digits=15, decimal_places=2)
+    beta_coeffecient = models.DecimalField(max_digits=15, decimal_places=2)
+    var = models.DecimalField(max_digits=15, decimal_places=2)
+
+    market_sensitivity = models.CharField(max_length=50)
+    impact = models.CharField(max_length=50)
+
+    top_stocks = models.JSONField()
+    worst_stocks = models.JSONField()
+
+    transaction_history = models.JSONField()
+
+    def __str__(self):
+        return f"Portfolio of {self.user.username}"
+
 class Stock(models.Model):
     stock_symbol = models.CharField(max_length=10, unique=True)
     stock_name = models.CharField(max_length=255)
