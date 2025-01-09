@@ -179,53 +179,7 @@ class LatestStockStatus(APIView):
                 return JsonResponse({"message": "Stock status not found."}, status=status.HTTP_404_NOT_FOUND)
         except StockStatus.DoesNotExist:
             return JsonResponse({"message": "Stock status not found."}, status=status.HTTP_404_NOT_FOUND)
-
-def initialize_dashboard_and_portfolio(user_id):
-    user = get_object_or_404(User, id=user_id)
-
-    # Initialize or fetch Dashboard
-    dashboard, created = Dashboard.objects.get_or_create(
-        user=user,
-        defaults={
-            "invested_amount": Decimal("0.0"),
-            "current_stock_holding": Decimal("0.0"),
-            "profit_loss": "0.0%",
-            "day_change": "0.0%",
-            "portfolio_values": [],
-            "stock_distribution_by_sector": {},
-            "stock_distribution_by_company": {},
-            "stock_holdings": [],
-            "stock_suggestions": [],
-        },
-    )
-
-    # Initialize or fetch Portfolio
-    portfolio, created = Portfolio.objects.get_or_create(
-        user=user,
-        defaults={
-            "invested_amount": Decimal("0.0"),
-            "current_stock_holding": Decimal("0.0"),
-            "profit_loss": "0.0%",
-            "profit_loss_value": "0.0",
-            "day_change": "0.0%",
-            "stock_holding_details": [],
-            "cumulative_return_ytd": "0.0%",
-            "cumulative_return_1yr": "0.0%",
-            "cumulative_return_5yr": "0.0%",
-            "risk_level_indicator": Decimal("0.0"),
-            "std": Decimal("0.0"),
-            "beta_coeffecient": Decimal("0.0"),
-            "var": Decimal("0.0"),
-            "market_sensitivity": "Neutral",
-            "impact": "Neutral",
-            "top_stocks": [],
-            "worst_stocks": [],
-            "transaction_history": [],
-        },
-    )
-
-    return dashboard, portfolio
-    
+   
 def update_dashboard_and_portfolio(transaction: Transaction, user_id):
 
     user = get_object_or_404(User, id=user_id)
