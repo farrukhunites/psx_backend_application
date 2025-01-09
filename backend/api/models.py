@@ -117,3 +117,47 @@ class StockStatus(models.Model):
 
     def __str__(self):
         return f"Stock Status for {self.stock.stock_symbol} on {self.date}"
+    
+class Transaction(models.Model):
+    TRANSACTION_TYPES = [
+        ("buy", "Buy"),
+        ("sell", "Sell"),
+    ]
+
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    stock = models.ForeignKey("Stock", on_delete=models.CASCADE)
+    transaction_type = models.CharField(max_length=4, choices=TRANSACTION_TYPES)
+    shares = models.PositiveIntegerField()
+    price_per_share = models.DecimalField(max_digits=10, decimal_places=2)
+    total_value = models.DecimalField(max_digits=15, decimal_places=2)
+    transaction_date = models.DateTimeField(auto_now_add=True)
+
+    def save(self, *args, **kwargs):
+        """Automatically calculate the total transaction value."""
+        self.total_value = self.shares * self.price_per_share
+        super().save(*args, **kwargs)
+
+    def __str__(self):
+        return f"{self.transaction_type.capitalize()} {self.shares} of {self.stock.stock_symbol} by {self.user.username}"
+
+class Watchlist(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='watchlists')
+    stock = models.ForeignKey('Stock', on_delete=models.CASCADE, related_name='watchlists')
+    current_price = models.CharField(max_length=20)  # As a string representation of decimal values
+    volume = models.CharField(max_length=50)  # Volume as a string
+    risk_level = models.CharField(max_length=20)  # Risk level: 'low', 'medium', 'high'
+
+    class Meta:
+        unique_together = ('user', 'stock')
+
+    def __str__(self):
+        return f"Watchlist for {self.user.username} - {self.stock.stock_symbol}"
+    
+class Alert(models.Model):
+    watchlist = models.ForeignKey(Watchlist, related_name='alerts', on_delete=models.CASCADE)
+    condition = models.CharField(choices=[('above', 'Above'), ('below', 'Below')], max_length=5)
+    price = models.DecimalField(max_digits=10, decimal_places=2)
+    fulfilled = models.BooleanField(default=False)
+
+    def __str__(self):
+        return f"Alert for {self.watchlist.stock.stock_symbol} - {self.condition} {self.price}"

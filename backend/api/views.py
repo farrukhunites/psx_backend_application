@@ -4,9 +4,62 @@ from rest_framework.views import APIView
 from rest_framework.exceptions import NotFound
 from django.contrib.auth.hashers import make_password, check_password
 from rest_framework.generics import RetrieveAPIView
-from .models import User,Dashboard, Stock, StockStatus, Portfolio
-from .serializers import UserSerializer,DashboardSerializer, PortfolioSerializer
+from .models import User,Dashboard, Stock, StockStatus, Portfolio, Transaction, Watchlist, Alert
+from .serializers import UserSerializer,DashboardSerializer, PortfolioSerializer, StockStatusSerializer, WatchlistSerializer, AlertSerializer
 from django.http import JsonResponse
+from django.shortcuts import render
+from django.shortcuts import get_object_or_404
+from decimal import Decimal
+from django.views.decorators.csrf import csrf_exempt
+import json
+from django.core.serializers import serialize
+import numpy as np
+from django.db import IntegrityError
+
+
+def calculate_risk_level(ldcp, var, haircut, pe_ratio, one_year_change, ytd_change):
+    # Convert the string inputs into float values, handle "N/A" for pe_ratio
+    try:
+        ldcp = float(ldcp)
+    except ValueError:
+        ldcp = 0.0  # Default to 0 if conversion fails
+
+    try:
+        var = float(var)
+    except ValueError:
+        var = 0.0  # Default to 0 if conversion fails
+
+    try:
+        haircut = float(haircut)
+    except ValueError:
+        haircut = 0.0  # Default to 0 if conversion fails
+
+    # Handle "N/A" or non-numeric values for pe_ratio
+    if pe_ratio == "N/A" or not pe_ratio:
+        pe_ratio = 0.0  # Default to 0 for P/E Ratio if it's "N/A"
+    else:
+        try:
+            pe_ratio = float(pe_ratio)
+        except ValueError:
+            pe_ratio = 0.0  # Default to 0 if conversion fails
+
+    # Convert percentage values for "one_year_change" and "ytd_change"
+    one_year_change = float(one_year_change.replace('%', '').strip()) / 100
+    ytd_change = float(ytd_change.replace('%', '').strip()) / 100
+
+    # Formula for risk score, with adjusted weightings
+    risk_score = (var * 0.001) + (haircut * 0.002) + (pe_ratio / 25) + (abs(one_year_change) / 2) + (ytd_change / 2)
+
+    # Apply a logistic transformation (Sigmoid function)
+    risk_score = 1 / (1 + np.exp(-risk_score))
+
+    # Normalize the risk score between 0 and 1
+    if risk_score <= 0.5:
+        return "low"
+    elif risk_score <= 0.7:
+        return "medium"
+    else:
+        return "high"
 
 class UserListCreate(generics.ListCreateAPIView):
     """
@@ -126,10 +179,6 @@ def get_all_stock_statuses(request):
     stocks_statuses = list(StockStatus.objects.values())
     return JsonResponse(stocks_statuses, safe=False)
 
-from django.shortcuts import render
-from django.http import JsonResponse
-from api.models import Stock, StockStatus
-
 def get_stock_status_for_symbol(request, stock_symbol):
     try:
         stock_symbol = stock_symbol.upper()
@@ -172,3 +221,327 @@ def get_stock_status_for_symbol(request, stock_symbol):
     except Stock.DoesNotExist:
         # If stock with the given symbol does not exist
         return JsonResponse({'error': f'Stock with symbol {stock_symbol} not found'}, status=404)
+
+class LatestStockStatus(APIView):
+    def get(self, request, stock_symbol):
+        # Get the latest StockStatus for the given stock_symbol
+        try:
+            stock_status = StockStatus.objects.filter(
+                stock__stock_symbol=stock_symbol
+            ).order_by('-date').first()  # Get the latest one based on date
+            if stock_status:
+                # Serialize the stock status and return it
+                serializer = StockStatusSerializer(stock_status)
+                return Response(serializer.data)
+            else:
+                return JsonResponse({"message": "Stock status not found."}, status=status.HTTP_404_NOT_FOUND)
+        except StockStatus.DoesNotExist:
+            return JsonResponse({"message": "Stock status not found."}, status=status.HTTP_404_NOT_FOUND)
+
+def initialize_dashboard_and_portfolio(user_id):
+    user = get_object_or_404(User, id=user_id)
+
+    # Initialize or fetch Dashboard
+    dashboard, created = Dashboard.objects.get_or_create(
+        user=user,
+        defaults={
+            "invested_amount": Decimal("0.0"),
+            "current_stock_holding": Decimal("0.0"),
+            "profit_loss": "0.0%",
+            "day_change": "0.0%",
+            "portfolio_values": [],
+            "stock_distribution_by_sector": {},
+            "stock_distribution_by_company": {},
+            "stock_holdings": [],
+            "stock_suggestions": [],
+        },
+    )
+
+    # Initialize or fetch Portfolio
+    portfolio, created = Portfolio.objects.get_or_create(
+        user=user,
+        defaults={
+            "invested_amount": Decimal("0.0"),
+            "current_stock_holding": Decimal("0.0"),
+            "profit_loss": "0.0%",
+            "profit_loss_value": "0.0",
+            "day_change": "0.0%",
+            "stock_holding_details": [],
+            "cumulative_return_ytd": "0.0%",
+            "cumulative_return_1yr": "0.0%",
+            "cumulative_return_5yr": "0.0%",
+            "risk_level_indicator": Decimal("0.0"),
+            "std": Decimal("0.0"),
+            "beta_coeffecient": Decimal("0.0"),
+            "var": Decimal("0.0"),
+            "market_sensitivity": "Neutral",
+            "impact": "Neutral",
+            "top_stocks": [],
+            "worst_stocks": [],
+            "transaction_history": [],
+        },
+    )
+
+    return dashboard, portfolio
+    
+def update_dashboard_and_portfolio(transaction, user_id):
+
+    user = get_object_or_404(User, id=user_id)
+
+    # Update dashboard and portfolio
+    dashboard, portfolio = initialize_dashboard_and_portfolio(user_id)
+
+    if transaction.transaction_type == "buy":
+        dashboard.invested_amount += transaction.total_value
+        portfolio.invested_amount += transaction.total_value
+    elif transaction.transaction_type == "sell":
+        dashboard.invested_amount -= transaction.total_value
+        portfolio.invested_amount -= transaction.total_value
+
+    # Save updated data
+    dashboard.save()
+    portfolio.save()
+
+@csrf_exempt
+def add_transaction(request, user_id):
+    if request.method == "POST":
+        user = get_object_or_404(User, id=user_id)
+        transaction_data = json.loads(request.body)
+
+        print(transaction_data)
+
+        stock_symbol = transaction_data.get("stock_symbol")
+        transaction_type = transaction_data.get("type")
+        shares = int(transaction_data.get("shares", 0))
+        price_per_share = Decimal(transaction_data.get("price_per_share", "0.0"))
+
+        # Fetch or create the stock
+        stock, _ = Stock.objects.get_or_create(stock_symbol=stock_symbol)
+
+        # Create the transaction
+        transaction = Transaction.objects.create(
+            user=user,
+            stock=stock,
+            transaction_type=transaction_type,
+            shares=shares,
+            price_per_share=price_per_share,
+        )
+
+        # Update dashboard and portfolio (reuse logic from `update_dashboard_and_portfolio`)
+        update_dashboard_and_portfolio(transaction, user_id)
+
+        return JsonResponse({"status": "success", "message": "Transaction added successfully!"})
+
+    return JsonResponse({"status": "error", "message": "Invalid request method"})
+
+def transaction_history(request, user_id):
+    user = get_object_or_404(User, id=user_id)
+    transactions = Transaction.objects.filter(user=user).order_by('-transaction_date')
+
+    transactions_json = json.loads(serialize('json', transactions))
+
+    # Format data to remove unnecessary "model" and "pk" keys
+    formatted_transactions = [
+        {
+            "user": t["fields"]["user"],
+            "stock": t["fields"]["stock"],
+            "transaction_type": t["fields"]["transaction_type"],
+            "shares": t["fields"]["shares"],
+            "price_per_share": float(t["fields"]["price_per_share"]),
+            "total_value": float(t["fields"]["total_value"]),
+            "transaction_date": t["fields"]["transaction_date"],
+        }
+        for t in transactions_json
+    ]
+
+    return JsonResponse({"transactions": formatted_transactions})
+
+class WatchlistCreateAPIView(APIView):
+    def post(self, request, *args, **kwargs):
+        user_id = request.data.get('user_id')
+        stock_symbol = request.data.get('stock_symbol')
+
+        # Check if user_id and stock_symbol are provided
+        if not user_id or not stock_symbol:
+            return Response({"error": "user_id and stock_symbol are required"}, status=status.HTTP_400_BAD_REQUEST)
+
+        # Retrieve the latest stock status for the given stock_symbol
+        stock_status = StockStatus.objects.filter(
+            stock__stock_symbol=stock_symbol
+        ).order_by('-date').first()
+
+        print(stock_status)
+
+        if not stock_status:
+            raise NotFound(detail="Stock status not found for this symbol", code=404)
+
+        # Calculate risk level
+        risk_level = calculate_risk_level(
+            stock_status.ldcp, stock_status.var, stock_status.haircut,
+            stock_status.pe_ratio, stock_status.one_year_change, stock_status.ytd_change
+        )
+
+        try:
+            # Create Watchlist entry for the specified user_id
+            watchlist = Watchlist.objects.create(
+                user_id=user_id,  # Use the user_id provided in the request
+                stock=stock_status.stock,
+                current_price=stock_status.close_price,
+                volume=stock_status.volume,
+                risk_level=risk_level
+            )
+
+            # Serialize and return the response
+            serializer = WatchlistSerializer(watchlist)
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+    
+        except IntegrityError:
+        # Handle any other integrity errors
+            return Response({"error": "A unique constraint violation occurred."}, status=status.HTTP_400_BAD_REQUEST)
+
+class WatchlistListAPIView(APIView):
+    def get(self, request, *args, **kwargs):
+        user_id = request.query_params.get('user_id')
+
+        # Check if user_id is provided
+        if not user_id:
+            return Response({"error": "user_id is required"}, status=status.HTTP_400_BAD_REQUEST)
+
+        # Get the watchlist entries for the specified user_id
+        watchlist_entries = Watchlist.objects.filter(user_id=user_id)
+        
+        if not watchlist_entries:
+            return Response(watchlist_entries, status=status.HTTP_200_OK)
+
+        # For each stock in the watchlist, check and update the stock status
+        for watchlist_entry in watchlist_entries:
+            stock_symbol = watchlist_entry.stock.stock_symbol
+
+            # Retrieve the latest stock status for the given stock_symbol
+            latest_stock_status = StockStatus.objects.filter(
+                stock__stock_symbol=stock_symbol
+            ).order_by('-date').first()
+
+            if latest_stock_status:
+                # Compare if the latest stock status is different from the current stock status in the watchlist
+                if latest_stock_status.close_price != watchlist_entry.current_price or latest_stock_status.volume != watchlist_entry.volume:
+                    # Update the watchlist entry with the new stock status
+                    watchlist_entry.current_price = latest_stock_status.close_price
+                    watchlist_entry.volume = latest_stock_status.volume
+                    
+                    # Recalculate the risk level with the updated stock status
+                    risk_level = calculate_risk_level(
+                        latest_stock_status.ldcp, latest_stock_status.var, latest_stock_status.haircut,
+                        latest_stock_status.pe_ratio, latest_stock_status.one_year_change, latest_stock_status.ytd_change
+                    )
+                    watchlist_entry.risk_level = risk_level
+                    watchlist_entry.save()  # Save the updated entry
+
+        # Serialize and return the updated watchlist
+        serializer = WatchlistSerializer(watchlist_entries, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+
+class WatchlistDeleteAPIView(APIView):
+    def delete(self, request, *args, **kwargs):
+        user_id = request.data.get('user_id')
+        stock_symbol = request.data.get('stock_symbol')
+
+        # Check if user_id and stock_symbol are provided
+        if not user_id or not stock_symbol:
+            return Response({"error": "user_id and stock_symbol are required"}, status=status.HTTP_400_BAD_REQUEST)
+
+        # Retrieve the watchlist entry for the specified user_id and stock_symbol
+        watchlist_entry = Watchlist.objects.filter(user_id=user_id, stock__stock_symbol=stock_symbol).first()
+
+        if not watchlist_entry:
+            return Response({"error": "Watchlist entry not found for this user and stock symbol"}, status=status.HTTP_404_NOT_FOUND)
+
+        # Delete the watchlist entry
+        watchlist_entry.delete()
+
+        return Response({"message": "Watchlist entry deleted successfully"}, status=status.HTTP_204_NO_CONTENT)
+
+class AlertCreateAPIView(APIView):
+    def post(self, request, *args, **kwargs):
+        user_id = request.data.get('user_id')
+        watchlist_id = request.data.get('watchlist_id')
+        condition = request.data.get('condition')
+        price = request.data.get('price')
+
+        # Check if required fields are provided
+        if not user_id or not watchlist_id or not condition or not price:
+            return Response({"error": "user_id, watchlist_id, condition, and price are required"}, status=status.HTTP_400_BAD_REQUEST)
+
+        # Get the corresponding Watchlist
+        try:
+            watchlist = Watchlist.objects.get(id=watchlist_id, user_id=user_id)
+        except Watchlist.DoesNotExist:
+            return Response({"error": "Watchlist not found for the user"}, status=status.HTTP_404_NOT_FOUND)
+
+        # Retrieve and preprocess the current price from the Watchlist
+        current_price_str = watchlist.current_price
+        current_price = float(current_price_str.replace('Rs.', '').replace(',', '').strip())
+
+        # Determine if the alert condition is fulfilled
+        if (condition == 'above' and current_price > price) or (condition == 'below' and current_price < price):
+            fulfilled = True
+        else:
+            fulfilled = False
+
+        # Create the alert
+        alert = Alert.objects.create(
+            watchlist=watchlist,
+            condition=condition,
+            price=price,
+            fulfilled=fulfilled
+        )
+
+        # Serialize and return the response
+        serializer = AlertSerializer(alert)
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
+
+class AlertListAPIView(APIView):
+    def get(self, request, *args, **kwargs):
+        user_id = request.query_params.get('user_id')
+
+        # Check if user_id is provided
+        if not user_id:
+            return Response({"error": "user_id is required"}, status=status.HTTP_400_BAD_REQUEST)
+
+        # Get all alerts for the specified user_id
+        alerts = Alert.objects.filter(watchlist__user_id=user_id)
+
+        # Check each alert's condition and update the fulfilled status
+        for alert in alerts:
+            # Retrieve and preprocess the current price from the related Watchlist
+            current_price_str = alert.watchlist.current_price
+            current_price = float(current_price_str.replace('Rs.', '').replace(',', '').strip())
+
+            # Update the fulfilled field based on the condition
+            if (alert.condition == 'above' and current_price > alert.price) or \
+               (alert.condition == 'below' and current_price < alert.price):
+                alert.fulfilled = True
+            else:
+                alert.fulfilled = False
+
+            # Save the updated alert
+            alert.save()
+
+        # Serialize and return the response
+        serializer = AlertSerializer(alerts, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+
+class AlertDeleteAPIView(APIView):
+    def delete(self, request, *args, **kwargs):
+        alert_id = request.data.get('alert_id')
+
+        if not alert_id:
+            return Response({"error": "alert_id is required"}, status=status.HTTP_400_BAD_REQUEST)
+
+        # Try to find and delete the alert
+        try:
+            alert = Alert.objects.get(id=alert_id)
+            alert.delete()
+            return Response({"message": "Alert deleted successfully."}, status=status.HTTP_204_NO_CONTENT)
+        except Alert.DoesNotExist:
+            return Response({"error": "Alert not found."}, status=status.HTTP_404_NOT_FOUND)
