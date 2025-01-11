@@ -74,7 +74,7 @@ class DashboardView(APIView):
 
         res['invested_amount'] = invested
         res['current_stock_holding'] = current_stock_holding
-        res['day_change'] = day_change
+        res['day_change'] = round(day_change, 2)
         res['stock_distribution_by_sector'] = stock_distribution_by_sector
         res['stock_distribution_by_company'] = stock_distribution_by_company
         res['stock_holdings'] = stock_holdings

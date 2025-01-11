@@ -3,7 +3,6 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework.exceptions import NotFound
 from django.contrib.auth.hashers import check_password
-from rest_framework.generics import RetrieveAPIView
 from .models import User, Stock, StockStatus, Transaction, Watchlist, Alert, StockHolding
 from .serializers import UserSerializer, StockStatusSerializer, WatchlistSerializer, AlertSerializer
 from django.http import JsonResponse
@@ -92,7 +91,8 @@ class LoginUser(APIView):
             return Response({"error": "Invalid username or password."}, status=status.HTTP_404_NOT_FOUND)
 
         if check_password(password, user.password):
-            return Response({"message": "Login successful!"}, status=status.HTTP_200_OK)
+            serializer = UserSerializer(user)
+            return Response({"message": "Login successful!", "user": serializer.data}, status=status.HTTP_200_OK)
         else:
             return Response({"error": "Invalid username or password."}, status=status.HTTP_400_BAD_REQUEST)
 
@@ -184,9 +184,6 @@ def update_dashboard_and_portfolio(transaction: Transaction, user_id):
 
     user = get_object_or_404(User, id=user_id)
 
-    # Update dashboard and portfolio
-    # dashboard, portfolio = initialize_dashboard_and_portfolio(user_id)
-
     holdings, created = StockHolding.objects.get_or_create(user=user, stock=transaction.stock)
 
     if transaction.transaction_type == "buy":
@@ -195,7 +192,10 @@ def update_dashboard_and_portfolio(transaction: Transaction, user_id):
     elif transaction.transaction_type == "sell":
         holdings.shares -= transaction.shares
 
-    holdings.save()
+    if holdings.shares <= 0:
+        holdings.delete()
+    else:
+        holdings.save()
 
 @csrf_exempt
 def add_transaction(request, user_id):
@@ -231,22 +231,23 @@ def add_transaction(request, user_id):
 
 def transaction_history(request, user_id):
     user = get_object_or_404(User, id=user_id)
-    transactions = Transaction.objects.filter(user=user).order_by('-transaction_date')
+    
+    # Fetch transactions and related stock details
+    transactions = Transaction.objects.filter(user=user).select_related('stock').order_by('-transaction_date')
 
-    transactions_json = json.loads(serialize('json', transactions))
-
-    # Format data to remove unnecessary "model" and "pk" keys
+    # Format data to include stock_name and stock_symbol
     formatted_transactions = [
         {
-            "user": t["fields"]["user"],
-            "stock": t["fields"]["stock"],
-            "transaction_type": t["fields"]["transaction_type"],
-            "shares": t["fields"]["shares"],
-            "price_per_share": float(t["fields"]["price_per_share"]),
-            "total_value": float(t["fields"]["total_value"]),
-            "transaction_date": t["fields"]["transaction_date"],
+            "user": transaction.user.id,
+            "stock_name": transaction.stock.stock_name,  # Assuming 'name' is the field for stock name
+            "stock_symbol": transaction.stock.stock_symbol,  # Assuming 'symbol' is the field for stock symbol
+            "transaction_type": transaction.transaction_type,
+            "shares": transaction.shares,
+            "price_per_share": float(transaction.price_per_share),
+            "total_value": float(transaction.total_value),
+            "transaction_date": transaction.transaction_date,
         }
-        for t in transactions_json
+        for transaction in transactions
     ]
 
     return JsonResponse({"transactions": formatted_transactions})

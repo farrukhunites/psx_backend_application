@@ -9,6 +9,7 @@ class User(models.Model):
     ]
 
     username = models.CharField(max_length=50, unique=True)
+    name = models.CharField(max_length=50, default="Person Name")
     password = models.CharField(max_length=100)
     email = models.CharField(max_length=50, unique=True, null=True, blank=True)
     cdc_id = models.CharField(max_length=100, default="Unknown")

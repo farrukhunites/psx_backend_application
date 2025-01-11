@@ -66,15 +66,7 @@ class PortfolioView(APIView):
                 (h.shares * h.price_buy)
             ) * 100
             profit_loss_percentages.append(profit_loss_percentage)
-
-            stock_holdings.append({"stock_name": h.stock.stock_name, 
-                                   "price_bought": h.price_buy, 
-                                   "current_price": status_close_price, 
-                                   "expected": status.circuit_breaker, 
-                                   "day_change": status.change_percent, 
-                                   "profit_loss_value": round(Decimal(status_close_price*h.shares)-h.shares*h.price_buy, 2), 
-                                   "quantity": h.shares, 
-                                   'profit_loss': round(((Decimal(status_close_price*h.shares)-h.shares*h.price_buy)/(h.shares*h.price_buy))*100, 2)})
+                                    
             day_change +=  Decimal(status.change_percent.replace("(", '').replace("%)", '').strip())
 
             latest_date = StockStatus.objects.aggregate(latest_date=Max('date'))['latest_date']
@@ -84,8 +76,21 @@ class PortfolioView(APIView):
                 one_year_change = 0
                 
             risk_level, risk_score = calculate_risk_level(s.ldcp, s.var, s.haircut, s.pe_ratio, one_year_change, s.ytd_change)
+        
             total_risk_score += risk_score
             total_var += float(s.var)*h.shares
+
+            stock_holdings.append({"stock_name": h.stock.stock_name, 
+                                   "stock_symbol": h.stock.stock_symbol, 
+                                   "price_bought": h.price_buy, 
+                                   "current_price": status_close_price, 
+                                   "expected": status.circuit_breaker, 
+                                   "day_change": status.change_percent, 
+                                   "profit_loss_value": round(Decimal(status_close_price*h.shares)-h.shares*h.price_buy, 2), 
+                                   "quantity": h.shares, 
+                                   'profit_loss': round(((Decimal(status_close_price*h.shares)-h.shares*h.price_buy)/(h.shares*h.price_buy))*100, 2),
+                                   "risk_preference": risk_level
+                                   })
 
         res['risk_level_indicator'] = round((total_risk_score/total_count) * 100)
         res['var'] = round((total_var/total_count) * 100, 2)
@@ -105,6 +110,7 @@ class PortfolioView(APIView):
         res['current_stock_holding'] = current_stock_holding
         res['profit_loss'] = round(((current_stock_holding-invested) / invested) * 100, 2)
         res['profit_loss_value'] = (current_stock_holding-invested)
+        day_change = round(day_change/holding.count(), 2)
         res['day_change'] = day_change
 
         res['stock_holding_details'] = stock_holdings

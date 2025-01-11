@@ -6,7 +6,7 @@ from .models import User, StockStatus, Watchlist, Alert
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ['id', 'username', 'password', 'date_created', 'risk_preference']
+        fields = ['id', 'name', 'username', 'password', 'email', 'cdc_id', 'date_created', 'risk_preference']
         extra_kwargs = {
             'password': {'write_only': True},  # Ensure password is write-only
         }
