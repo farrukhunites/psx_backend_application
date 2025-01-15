@@ -11,6 +11,7 @@ class Command(BaseCommand):
         stocks = Stock.objects.all()
 
         for stock in stocks:
+
             # Define the URL
             url = f"https://dps.psx.com.pk/company/{stock.stock_symbol}"
 
