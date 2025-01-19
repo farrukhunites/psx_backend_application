@@ -30,6 +30,19 @@ class DashboardView(APIView):
         holding = StockHolding.objects.filter(user=user_id)
 
         if not(holding.exists()):
+
+            latest_date = StockStatus.objects.aggregate(latest_date=Max('date'))['latest_date']
+            latest_stock_statuses = StockStatus.objects.filter(date=latest_date)
+            suggestions = []
+            for s in latest_stock_statuses:
+                if s.one_year_change != 'N/A':
+                    risk_level, risk_score = calculate_risk_level(s.ldcp, s.var, s.haircut, s.pe_ratio, s.one_year_change, s.ytd_change)
+                    if risk_level == user.risk_preference and risk_score != 0:
+                        suggestions.append({"stock_name": s.stock.stock_name, "current_price": s.close_price, "volume": s.volume, "suggestion": 'Buy', 'risk_preference': risk_level, "risk_score": risk_score})
+                    
+            sorted_suggestions = sorted(suggestions, key=lambda x: x['risk_score'])[:5]
+            res['stock_suggestions'] = sorted_suggestions
+
             return Response(res)
 
         invested = 0

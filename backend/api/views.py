@@ -47,7 +47,7 @@ def calculate_risk_level(ldcp, var, haircut, pe_ratio, one_year_change, ytd_chan
     ytd_change = float(ytd_change.replace('%', '').strip()) / 100
 
     # Formula for risk score, with adjusted weightings
-    risk_score = (var * 0.001) + (haircut * 0.002) + (pe_ratio / 25) + (abs(one_year_change) / 2) + (ytd_change / 2)
+    risk_score = (var * -0.001) + (haircut * -0.002) + (pe_ratio / 25) + (abs(one_year_change) / 2) + (ytd_change / 2)
 
     # Apply a logistic transformation (Sigmoid function)
     risk_score = 1 / (1 + np.exp(-risk_score))
