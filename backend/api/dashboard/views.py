@@ -38,7 +38,8 @@ class DashboardView(APIView):
                 if s.one_year_change != 'N/A':
                     risk_level, risk_score = calculate_risk_level(s.ldcp, s.var, s.haircut, s.pe_ratio, s.one_year_change, s.ytd_change)
                     if risk_level == user.risk_preference and risk_score != 0:
-                        suggestions.append({"stock_name": s.stock.stock_name, "current_price": s.close_price, "volume": s.volume, "suggestion": 'Buy', 'risk_preference': risk_level, "risk_score": risk_score})
+                        suggestions.append({"symbol": s.stock.stock_symbol, "stock_name": s.stock.stock_name, "current_price": s.close_price, "volume": s.volume, "suggestion": 'Buy', 'risk_preference': risk_level, "risk_score": risk_score})
+                        print(suggestions)
                     
             sorted_suggestions = sorted(suggestions, key=lambda x: x['risk_score'])[:5]
             res['stock_suggestions'] = sorted_suggestions
@@ -72,7 +73,7 @@ class DashboardView(APIView):
             current_stock_holding += status_close_price*h.shares
             invested += h.shares * h.price_buy
 
-            stock_holdings.append({"stock_name": h.stock.stock_name, "price_bought": h.price_buy, "current_price": status_close_price, "expected": status.circuit_breaker, "day_change": status.change_percent, "profit_loss": Decimal(status.change_value)*h.shares})
+            stock_holdings.append({"symbol": h.stock.stock_symbol, "stock_name": h.stock.stock_name, "price_bought": h.price_buy, "current_price": status_close_price, "expected": status.circuit_breaker, "day_change": status.change_percent, "profit_loss": Decimal(status.change_value)*h.shares})
             day_change +=  Decimal(status.change_percent.replace("(", '').replace("%)", '').strip())
         
         day_change = day_change / holding.count()
