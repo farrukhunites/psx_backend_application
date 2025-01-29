@@ -16,6 +16,33 @@ from django.db import IntegrityError
 from django.db.models import Max
 
 
+class UserUpdateView(APIView):
+    def put(self, request, *args, **kwargs):
+        # Extract user ID from request data
+        user_id = request.data.get('user_id')
+        if not user_id:
+            return Response({'error': 'User ID is required'}, status=status.HTTP_400_BAD_REQUEST)
+
+        try:
+            user = User.objects.get(id=user_id)
+        except User.DoesNotExist:
+            return Response({'error': 'User not found'}, status=status.HTTP_404_NOT_FOUND)
+
+        # Map frontend fields to model fields
+        update_data = {
+            'name': request.data.get('name'),
+            'cdc_id': request.data.get('cdc_id'),  # Map 'cdcid' to 'cdc_id'
+            'email': request.data.get('email')
+        }
+
+        # Update user with direct assignment
+        for key, value in update_data.items():
+            if value is not None:
+                setattr(user, key, value)
+        
+        user.save()
+        return Response({'status': 'User updated'}, status=status.HTTP_200_OK)
+
 def calculate_risk_level(ldcp, var, haircut, pe_ratio, one_year_change, ytd_change):
     # Convert the string inputs into float values, handle "N/A" for pe_ratio
     try:

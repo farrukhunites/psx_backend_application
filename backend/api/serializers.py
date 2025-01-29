@@ -16,47 +16,6 @@ class UserSerializer(serializers.ModelSerializer):
         validated_data['password'] = make_password(validated_data['password'])
         return super().create(validated_data)
 
-# class DashboardSerializer(serializers.ModelSerializer):
-#     class Meta:
-#         model = Dashboard
-#         fields = [
-#             'user',
-#             'invested_amount',
-#             'current_stock_holding',
-#             'profit_loss',
-#             'day_change',
-#             'portfolio_values',
-#             'stock_distribution_by_sector',
-#             'stock_distribution_by_company',
-#             'stock_holdings',
-#             'stock_suggestions',
-#         ]
-
-# class PortfolioSerializer(serializers.ModelSerializer):
-    # class Meta:
-    #     model = Portfolio
-    #     fields = [
-    #         'user',
-    #         'invested_amount',
-    #         'current_stock_holding',
-    #         'profit_loss',
-    #         'profit_loss_value',
-    #         'day_change',
-    #         'stock_holding_details',
-    #         'cumulative_return_ytd',
-    #         'cumulative_return_1yr',
-    #         'cumulative_return_5yr',
-    #         'risk_level_indicator',
-    #         'std',
-    #         'beta_coeffecient',
-    #         'var',
-    #         'market_sensitivity',
-    #         'impact',
-    #         'top_stocks',
-    #         'worst_stocks',
-    #         'transaction_history',
-    #     ]
-
 class StockStatusSerializer(serializers.ModelSerializer):
     class Meta:
         model = StockStatus
