@@ -104,7 +104,7 @@ class DashboardView(APIView):
                 if risk_level == user.risk_preference and risk_score != 0:
                     holding = StockHolding.objects.filter(stock=s.stock).exists()
                     if not(holding):
-                        suggestions.append({"stock_name": s.stock.stock_name, "current_price": s.close_price, "volume": s.volume, "suggestion": 'Buy', 'risk_preference': risk_level, "risk_score": risk_score})
+                        suggestions.append({"symbol": s.stock.stock_symbol, "stock_name": s.stock.stock_name, "current_price": s.close_price, "volume": s.volume, "suggestion": 'Buy', 'risk_preference': risk_level, "risk_score": risk_score})
                 
         sorted_suggestions = sorted(suggestions, key=lambda x: x['risk_score'])[:5]
         res['stock_suggestions'] = sorted_suggestions

@@ -38,7 +38,7 @@ class StockHolding(models.Model):
     shares = models.IntegerField(default=0)
     
 class StockStatus(models.Model):
-    stock = models.ForeignKey('Stock', on_delete=models.CASCADE, related_name="stock_statuses")
+    stock = models.ForeignKey(Stock, on_delete=models.CASCADE, related_name="stock_statuses")
     date = models.DateField(auto_now_add=True)
 
     # Stock-related attributes
