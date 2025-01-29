@@ -15,7 +15,6 @@ import numpy as np
 from django.db import IntegrityError
 from django.db.models import Max
 
-
 class UserUpdateView(APIView):
     def put(self, request, *args, **kwargs):
         # Extract user ID from request data
