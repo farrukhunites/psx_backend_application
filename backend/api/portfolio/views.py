@@ -106,7 +106,7 @@ class PortfolioView(APIView):
 
         res['std'] = round(std_deviation, 2)
 
-        res['invested_amount'] = invested
+        res['invested_amount'] = round(invested, 4)
         res['current_stock_holding'] = current_stock_holding
         res['profit_loss'] = round(((current_stock_holding-invested) / invested) * 100, 2)
         res['profit_loss_value'] = (current_stock_holding-invested)
