@@ -1,6 +1,3 @@
-Apologies for the confusion earlier. Here's the **entire `README.md` in one single clean code block**, as requested:
-
-````markdown
 # PSX Stocks Analysis Application
 
 This repository contains the **backend** part of the PSX Stocks Analysis Application, built using **Django**.  
@@ -37,15 +34,12 @@ pip install -r requirements.txt
 # Apply migrations and run the server
 python manage.py migrate
 python manage.py runserver
-````
 
 > Backend runs at: `http://127.0.0.1:8000/`
 
 ### 🧪 Running Tests
 
-```bash
 python manage.py test
-```
 
 ---
 
@@ -55,7 +49,6 @@ The frontend is developed in React and connects to the Django API for data.
 
 ### 🚀 Getting Started
 
-```bash
 # Clone the frontend repository
 git clone https://github.com/farrukhunites/psx-frontend-application.git
 cd psx-frontend-application
@@ -65,7 +58,6 @@ npm install
 
 # Run the frontend app
 npm start
-```
 
 > Frontend runs at: `http://localhost:3000`
 
